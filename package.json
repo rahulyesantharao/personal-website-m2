@@ -1,0 +1,19 @@
+{
+  "name": "personal-website_m2",
+  "version": "0.0.1",
+  "description": "Rahul's personal website, mark 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulyesantharao/personal-website-m2.git"
+  },
+  "author": "Rahul Yesantharao <rahul.yesantharao@gmail.com> (http://www.rahulyesantharao.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rahulyesantharao/personal-website-m2/issues"
+  },
+  "homepage": "https://github.com/rahulyesantharao/personal-website-m2#readme"
+}
