@@ -1,0 +1,25 @@
+// Colors
+$color-primary: blue;
+$color-accent: red;
+$color-font: black;
+$color-link: green;
+$color-link-hover: darken($color-link, 50%);
+$color-bg: white;
+
+// Fonts
+$font-primary: sans-serif;
+
+$font-size-1: 1rem;
+$font-size-2: 1.5rem;
+$font-size-3: 2rem;
+
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Responsive Breakpoints
+$screen-gap: 24px;
+$screen-tablet: 769px;
+$screen-desktop: 960px + (2*$screen-gap);
+$screen-widescreen: 1152px + (2*$screen-gap);
+$screen-fullhd: 1344px +  (2*$screen-gap);
