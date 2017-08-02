@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const chalk = require('chalk');
 const webpack = require('webpack');
-const webpackConfig = require('../webpack/webpack.config.prod');
+const webpackConfig = require('../webpack/webpack.config.dist');
 
 const MESSAGE = chalk.bold.blue;
 const ERROR = chalk.underline.red;
