@@ -1,3 +1,4 @@
+// basic resets
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
@@ -15,14 +16,25 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4,
-p, blockquote, figure,
-ol, ul {
+html, body, div,
+nav, header, main, section, footer,
+h1, h2, p, a, img,
+form, input,
+ol, ul, li {
   margin: 0;
   padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  outline: none;
+  vertical-align: baseline;
+}
+:focus {
+  outline: none;
 }
 
-main {
+// HTML5 fixes for old browsers
+main, nav, section, header, footer {
   display: block;
 }
 
@@ -39,7 +51,7 @@ a {
   }
 }
 
-// button basic resets
+// button resets
 button {
     overflow: visible;
     border: 0;
@@ -57,9 +69,10 @@ button {
     padding: 0;
     border: 0;
 }
+
+// image resets
 img {
     max-width: 100%;
     height: auto;
-    border: 0;
 }
 
