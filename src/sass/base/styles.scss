@@ -3,26 +3,19 @@ html {
   color: $color-font;
   font-family: $font-primary;
   line-height: $line-height-primary;
+  height: 100%;
 }
 
 body {
   font-size: 1rem;
   // figure out line-height, weight, etc.
+  height: 100%;
+  min-height: 100%;
 }
 
 ::selection {
   background: $color-selection;
   text-shadow: none;
-}
-
-section {
-  // padding: 3rem 1.5rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: $color-primary;
 }
 
 a {
