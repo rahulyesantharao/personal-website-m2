@@ -1,0 +1,25 @@
+.container-fluid {
+  margin: 0 auto;
+  padding-left: $screen-gap;
+  padding-right: $screen-gap;
+}
+
+.container {
+  @extend .container-fluid;
+  @include tablet {
+    max-width: $screen-tablet - (2 * $screen-gap);
+    width: $screen-tablet - (2 * $screen-gap);
+  }
+  @include desktop {
+    max-width: $screen-desktop - (2 * $screen-gap);
+    width: $screen-desktop - (2 * $screen-gap);
+  }
+  @include widescreen {
+    max-width: $screen-widescreen - (2 * $screen-gap);
+    width: $screen-widescreen - (2 * $screen-gap);
+  }
+  @include fullhd {
+    max-width: $screen-fullhd - (2 * $screen-gap);
+    width: $screen-fullhd - (2 * $screen-gap);
+  }
+}

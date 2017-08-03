@@ -1,0 +1,41 @@
+html {
+  background-color: $color-bg;
+  color: $color-font;
+  font-family: $font-primary;
+  line-height: $line-height-primary;
+}
+
+body {
+  font-size: 1rem;
+  // figure out line-height, weight, etc.
+}
+
+::selection {
+  background: $color-selection;
+  text-shadow: none;
+}
+
+section {
+  // padding: 3rem 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: $color-primary;
+}
+
+a {
+  transition: all 0.3s ease;
+  color: $color-link;
+  cursor: pointer;
+  &:link, &:visited {
+    color: $color-link;
+  }
+  &:hover, &:focus {
+    color: $color-link-hover;
+  }
+  &:active {
+    color: $color-link-pressed;
+  }
+}

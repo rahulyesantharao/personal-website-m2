@@ -1,9 +1,11 @@
 // Colors
 $color-primary: blue;
 $color-accent: red;
+$color-selection: lighten($color-accent, 30%);
 $color-font: black;
-$color-link: green;
-$color-link-hover: darken($color-link, 50%);
+$color-link: chartreuse;
+$color-link-hover: darken($color-link, 10%);
+$color-link-pressed: darken($color-link, 25%);
 $color-bg: white;
 
 // Fonts
@@ -17,9 +19,65 @@ $font-weight-light: 300;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
+$line-height-primary: 1.5;
+
 // Responsive Breakpoints
 $screen-gap: 24px;
 $screen-tablet: 769px;
 $screen-desktop: 960px + (2*$screen-gap);
 $screen-widescreen: 1152px + (2*$screen-gap);
 $screen-fullhd: 1344px +  (2*$screen-gap);
+
+@mixin mobile { // mobile screens
+  @media screen and (max-width: $screen-tablet -1px) {
+    @content;
+  }
+}
+
+@mixin tablet { // tablet and larger
+  @media screen and (min-width: $screen-tablet), print {
+    @content;
+  }
+}
+
+@mixin tablet-only { // only tablet
+  @media screen and (min-width: $tablet) and (max-width: $screen-desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin touch { // mobile and tablet
+  @media screen and (max-width: $screen-desktop -1px) {
+    @content;
+  }
+}
+
+@mixin desktop { // desktop and up
+  @media screen and (min-width: $screen-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-only { // only desktop
+  @media screen and (min-width: $screen-desktop) and (max-width: $screen-widescreen - 1px) {
+    @content;
+  }
+}
+
+@mixin widescreen { // widescreen and up
+  @media screen and (min-width: $screen-widescreen) {
+    @content;
+  }
+}
+
+@mixin widescreen-only { // only widescreen
+  @media screen and (min-width: $screen-widescreen) and (max-width: $screen-fullhd - 1px) {
+    @content;
+  }
+}
+
+@mixin fullhd { // full-hd and up
+  @media screen and (min-width: $screen-fullhd) {
+    @content;
+  }
+}
