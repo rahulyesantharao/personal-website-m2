@@ -1,19 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 // Colors
 $color-primary: blue;
 $color-accent: red;
 $color-selection: lighten($color-accent, 30%);
 $color-font: black;
-$color-link: chartreuse;
+
+$color-link: green;
 $color-link-hover: darken($color-link, 10%);
 $color-link-pressed: darken($color-link, 25%);
+
+$color-nav-link: lightblue;
+$color-nav-link-hover: darken($color-nav-link, 10%);
+$color-nav-link-pressed: darken($color-nav-link, 25%);
+
 $color-bg: white;
 
 // Fonts
-$font-primary: sans-serif;
-
-$font-size-1: 1rem;
-$font-size-2: 1.5rem;
-$font-size-3: 2rem;
+$font-primary: Lato, sans-serif;
 
 $font-weight-light: 300;
 $font-weight-medium: 500;
@@ -29,7 +33,7 @@ $screen-widescreen: 1152px + (2*$screen-gap);
 $screen-fullhd: 1344px +  (2*$screen-gap);
 
 @mixin mobile { // mobile screens
-  @media screen and (max-width: $screen-tablet -1px) {
+  @media screen and (max-width: $screen-tablet - 1px) {
     @content;
   }
 }
@@ -47,7 +51,7 @@ $screen-fullhd: 1344px +  (2*$screen-gap);
 }
 
 @mixin touch { // mobile and tablet
-  @media screen and (max-width: $screen-desktop -1px) {
+  @media screen and (max-width: $screen-desktop - 1px) {
     @content;
   }
 }

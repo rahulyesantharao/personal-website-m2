@@ -1,9 +1,11 @@
 import React from 'react';
 
-const AboutPage = () => (
-  <section>
-    <h1>this is an About Page!</h1>
-  </section>
-)
+const AboutPage = () => {
+  return (
+    <section className="container">
+      <h1>this is an About Page!</h1>
+    </section>
+  )
+}
 
 export default AboutPage;

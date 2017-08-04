@@ -1,13 +1,22 @@
 #app {
-  height: 100%;
-  [data-reactroot] {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+  &.home {
+    [data-reactroot] {
+      height: 100%;
+    }
+  }
+  &.not-home {
+    [data-reactroot] {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
 main {
+  &.home {
+    height: 100%;
+    padding-top: 0px;
+  }
   flex: 1;
 }
 
@@ -15,4 +24,14 @@ footer {
   text-align: center;
   padding: 1rem;
   background-color: $color-primary;
+  box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.16), 0 -2px 10px 0 rgba(0,0,0,0.12);
+  &.home {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    color: darken(white, 10%);
+    box-shadow: none;
+  }
 }
