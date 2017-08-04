@@ -8,10 +8,10 @@
   background-color: rgba(black, 0.1);
   font-weight: $font-weight-bold;
   display: flex;
-  &.home {
-    background-color: rgba(black, 0.1);
-    box-shadow: none;
-  }
+  // &.home {
+    // background-color: rgba(black, 0.1);
+    // box-shadow: none;
+  // }
   // basic navlink styling
   a {
     color: $color-nav-link;

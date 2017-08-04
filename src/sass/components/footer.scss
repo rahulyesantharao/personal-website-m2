@@ -1,16 +1,16 @@
-#app {
-  &.home {
-    [data-reactroot] {
-      height: 100%;
-    }
-  }
-  &.not-home {
-    [data-reactroot] {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-}
+// #app {
+//   &.home {
+//     [data-reactroot] {
+//       height: 100%;
+//     }
+//   }
+//   &.not-home {
+//     [data-reactroot] {
+//       display: flex;
+//       flex-direction: column;
+//     }
+//   }
+// }
 
 main {
   &.home {

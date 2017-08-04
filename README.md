@@ -4,9 +4,9 @@ Personal Website, mark 2
 ### TODO
 - [ ] Styling
   - [x] Finish Basic Site Styles
-  - [ ] Style Navbar
+  - [x] Style Navbar
     - [x] Basic responsiveness
-    - [ ] Mobile Navigation Drawer
+    - [x] Mobile Navigation Drawer
   - [ ] Use React for animation stuff instead of vanilla CSS
   - [ ] Create Responsive Setup (Grid System?)
 - [x] Figure out svg, png, jpg packaging with Webpack - use require() when specifying src in JSX

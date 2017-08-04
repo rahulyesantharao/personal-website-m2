@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Header = (props) => (
   <header>
-    <nav className={props.isHome?"navbar home":"navbar"}>
+    <nav className="navbar">
       <div className={props.menuOpen?"navbar-menu-drawer is-active":"navbar-menu-drawer"}>
           <div className="navbar-item">
             <NavLink exact to="/about" activeClassName="active">ABOUT</NavLink>
@@ -46,7 +46,7 @@ const Header = (props) => (
 );
 
 Header.propTypes = {
-  isHome: PropTypes.bool.isRequired,
+  // isHome: PropTypes.bool.isRequired,
   menuOpen: PropTypes.bool.isRequired,
   toggleMenu: PropTypes.func.isRequired
 }
