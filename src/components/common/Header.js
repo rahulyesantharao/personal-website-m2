@@ -27,7 +27,10 @@ const Header = (props) => (
       </div>
       <div className="navbar-right">
         <div className="navbar-item">
-          <a href="https://github.com/rahulyesantharao/" target="_blank" rel="noopener noreferrer">GH</a>
+          <a href="https://github.com/rahulyesantharao/" target="_blank" rel="noopener noreferrer">
+            {/* <img src={require('../../svg/github.svg')}/> */}
+            GH
+          </a>
         </div>
       </div>
     </nav>

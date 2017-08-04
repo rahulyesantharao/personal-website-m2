@@ -3,11 +3,13 @@ Personal Website, mark 2
 
 ### TODO
 - [ ] Styling
-  - [ ] Finish Basic Site Styles
+  - [x] Finish Basic Site Styles
   - [ ] Style Navbar
+    - [x] Basic responsiveness
+    - [ ] Mobile Navigation Drawer
   - [ ] Use React for animation stuff instead of vanilla CSS
   - [ ] Create Responsive Setup (Grid System?)
-- [ ] Figure out svg, png, jpg packaging with Webpack
+- [x] Figure out svg, png, jpg packaging with Webpack - use require() when specifying src in JSX
 - [ ] Update Production Stack
 - [ ] Figure out why React Router adds a new history state when I click the link to the page I am already on (is it because of favicon request?)
 - [ ] Figure out Favicon packaging with Webpack
