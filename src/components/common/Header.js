@@ -17,7 +17,7 @@ const Header = (props) => (
           <NavLink exact to="/" activeClassName="active">Rahul Y</NavLink>
         </div>
       </div>
-      <div className={props.menuOpen?"navbar-menu is-active":"navbar-menu"}>
+      <div className={props.menuOpen?"navbar-menu-desktop is-active":"navbar-menu-desktop"}>
           <div className="navbar-item">
             <NavLink exact to="/about" activeClassName="active">ABOUT</NavLink>
           </div>

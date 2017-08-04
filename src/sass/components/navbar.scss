@@ -109,9 +109,10 @@ $line-length: 20px;
 
 .navbar-right {
   display: flex;
+  // align-items: center;
 }
 
-.navbar-menu {
+.navbar-menu-desktop {
   // mobile-first: menu starts hidden
   display: none;
   transition: 0.3s all ease;
@@ -139,7 +140,7 @@ $line-length: 20px;
 
 // responsiveness
 @include touch {
-  .navbar-menu {
+  .navbar-menu-desktop {
     &.is-active {
       top: 0px;
       display: block;
@@ -148,7 +149,7 @@ $line-length: 20px;
 }
 
 @include desktop {
-  .navbar-menu {
+  .navbar-menu-desktop {
     display: flex;
     flex-grow: 1;
     flex-shrink: 0;
