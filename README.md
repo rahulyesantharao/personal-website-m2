@@ -5,6 +5,7 @@ Personal Website, mark 2
 - [ ] Styling
   - [ ] Finish Basic Site Styles
   - [ ] Style Navbar
+  - [ ] Use React for animation stuff instead of vanilla CSS
   - [ ] Create Responsive Setup (Grid System?)
 - [ ] Figure out svg, png, jpg packaging with Webpack
 - [ ] Update Production Stack

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
 
 // Colors
 $color-primary: blue;
@@ -10,9 +11,9 @@ $color-link: green;
 $color-link-hover: darken($color-link, 10%);
 $color-link-pressed: darken($color-link, 25%);
 
-$color-nav-link: lightblue;
-$color-nav-link-hover: darken($color-nav-link, 10%);
-$color-nav-link-pressed: darken($color-nav-link, 25%);
+$color-nav-link: white;
+$color-nav-link-hover: white;
+$color-nav-link-pressed: white;
 
 $color-bg: white;
 
