@@ -1,0 +1,55 @@
+.homePage {
+  height: 100%;
+  padding-top: 2rem;
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/9b/d5/90/9bd59004ca57caab828728a181a17208.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  .banner {
+    max-width: 100%;
+    text-align: right;
+    color: white;
+    font-family: monospace;
+    padding-right: $screen-gap;
+    position: absolute;
+    right: 0;
+    @include desktop {
+      padding-right: 2 * $screen-gap;
+    }
+    h1 {
+      font-size: 3rem;
+      line-height: 3.8rem;
+      @include tablet {
+        font-size: 5rem;
+        line-height: 6.2rem;
+      }
+      @include desktop {
+        font-size: 7rem;
+        line-height: 9rem;
+      }
+      span {
+        background-color: black;
+      }
+    }
+    h2 {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      font-size: 1rem;
+      line-height: 1.4rem;
+      @include tablet {
+        font-size: 2rem;
+        line-height: 2.7rem;
+      }
+      @include desktop {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+      span {
+        background-color: black;
+      }
+    }
+  }
+}
