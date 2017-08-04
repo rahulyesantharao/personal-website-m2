@@ -28,6 +28,20 @@
   }
 }
 
+.navbar-menu-drawer {
+  background-color: rgba(red, 0.1);
+  position: fixed;
+  // margin-top: 3rem;
+  margin: -1rem;
+  padding: 5rem 3rem;
+  max-width: 100%;
+  // margin-left: -1rem;
+  height: 100%;
+  transform: translateX(-120%);
+  transition: 0.3s all ease;
+  z-index: 999;
+}
+
 .navbar-item { // give navbar links room around them without creating linked area
   display: flex;
   padding: 0.5rem 0.75rem;
@@ -55,6 +69,7 @@ $line-between: 2;
 $line-length: 20px;
 
 .navbar-burger {
+  z-index: 1000;
   flex-shrink: 0; // make sure it isn't lost on ultra small screens
   cursor: pointer;
   display: block;
@@ -115,7 +130,6 @@ $line-length: 20px;
 .navbar-menu-desktop {
   // mobile-first: menu starts hidden
   display: none;
-  transition: 0.3s all ease;
   .navbar-item a { // sliding line effect under menu links
     overflow: hidden;
     &:after, &:before {
@@ -140,10 +154,11 @@ $line-length: 20px;
 
 // responsiveness
 @include touch {
-  .navbar-menu-desktop {
+  .navbar-menu-drawer {
     &.is-active {
-      top: 0px;
-      display: block;
+      // top: 0px;
+      // display: block;
+      transform: translateX(0px);
     }
   }
 }

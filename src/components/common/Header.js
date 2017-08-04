@@ -5,6 +5,14 @@ import PropTypes from 'prop-types';
 const Header = (props) => (
   <header>
     <nav className={props.isHome?"navbar home":"navbar"}>
+      <div className={props.menuOpen?"navbar-menu-drawer is-active":"navbar-menu-drawer"}>
+          <div className="navbar-item">
+            <NavLink exact to="/about" activeClassName="active">ABOUT</NavLink>
+          </div>
+          <div className="navbar-item">
+            <NavLink exact to="/projects" activeClassName="active">PROJECTS</NavLink>
+          </div>
+      </div>
       <div className="navbar-left">
         <div className="navbar-item is-hidden-desktop">
         <div className={props.menuOpen?"navbar-burger is-active":"navbar-burger"} onClick={props.toggleMenu}>
@@ -17,7 +25,7 @@ const Header = (props) => (
           <NavLink exact to="/" activeClassName="active">Rahul Y</NavLink>
         </div>
       </div>
-      <div className={props.menuOpen?"navbar-menu-desktop is-active":"navbar-menu-desktop"}>
+      <div className="navbar-menu-desktop">
           <div className="navbar-item">
             <NavLink exact to="/about" activeClassName="active">ABOUT</NavLink>
           </div>
