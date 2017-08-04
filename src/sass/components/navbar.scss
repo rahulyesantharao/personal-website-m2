@@ -7,14 +7,13 @@
   padding: 1rem;
   background-color: rgba(black, 0.1);
   font-weight: $font-weight-bold;
+  display: flex;
   &.home {
     background-color: rgba(black, 0.1);
     box-shadow: none;
   }
   // basic navlink styling
   a {
-    flex-grow: 0;
-    flex-shrink: 0;
     color: $color-nav-link;
     position: relative;
     &:link, &:visited {
@@ -29,45 +28,24 @@
   }
 }
 
-.navbar-brand {
+.navbar-item { // give navbar links room around them without creating linked area
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  align-items: center;
+}
+
+.navbar-left {
+  flex: 1;
   display: flex;
   align-items: stretch;
-  // hm
   flex-shrink: 0;
-  max-width: 100vw;
+  // max-width: 100vw;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   #logo {
-    border-right: 2px solid rgba(black, 0.1);
     font-size: 1.4rem;
     font-family: 'Zilla Slab', monospace;
-  }
-}
-
-.navbar-menu {
-  // mobile-first: menu starts hidden
-  transition: 0.3s all ease;
-  display: none;
-  .navbar-start .navbar-item a { // sliding line effect under menu links
-    overflow: hidden;
-    &:after, &:before {
-      position: absolute;
-      transition: 0.3s all ease;
-      content: "";
-    }
-    &:before {
-      bottom: 0px;
-      left: 0px;
-      width: 100%;
-      height: 2px;
-      transform: translateX(-100%);
-      background-color: $color-nav-link-hover;
-    }
-    &:hover:before, &.active:before {
-      transform: translateX(0px);
-      background-color: $color-nav-link-pressed;
-    }
   }
 }
 
@@ -78,12 +56,8 @@ $line-length: 20px;
 
 .navbar-burger {
   flex-shrink: 0; // make sure it isn't lost on ultra small screens
-  margin-right: 1rem;
   cursor: pointer;
   display: block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
   position: relative;
   height: (3+2*$line-between)*$line-height;
   width: $line-length;
@@ -133,10 +107,34 @@ $line-length: 20px;
   }
 }
 
-.navbar-item { // give navbar links room around them without creating linked area
+.navbar-right {
   display: flex;
-  padding: 0.5rem 1.5rem;
-  align-items: center;
+}
+
+.navbar-menu {
+  // mobile-first: menu starts hidden
+  display: none;
+  transition: 0.3s all ease;
+  .navbar-item a { // sliding line effect under menu links
+    overflow: hidden;
+    &:after, &:before {
+      position: absolute;
+      transition: 0.3s all ease;
+      content: "";
+    }
+    &:before {
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      transform: translateX(-100%);
+      background-color: $color-nav-link-hover;
+    }
+    &:hover:before, &.active:before {
+      transform: translateX(0px);
+      background-color: $color-nav-link-pressed;
+    }
+  }
 }
 
 // responsiveness
@@ -150,27 +148,19 @@ $line-length: 20px;
 }
 
 @include desktop {
-  nav, .navbar-menu, .navbar-start, .navbar-end {
-    display: flex;
-    align-items: stretch;
-  }
-  .navbar-burger {
-    display: none;
-  }
   .navbar-menu {
+    display: flex;
     flex-grow: 1;
     flex-shrink: 0;
-  }
-  .navbar-start {
-    .navbar-item {
-      padding: 0.5rem 0.75rem;
-    }
     justify-content: flex-start;
     margin-right: auto;
     margin-left: 0.75rem;
   }
-  .navbar-end {
-    justify-content: flex-end;
-    margin-left: auto;
+  .navbar-left {
+    #logo {
+      border-right: 2px solid rgba(black, 0.1);
+      padding-right: 1.5rem;
+    }
+    flex:  initial;
   }
 }
