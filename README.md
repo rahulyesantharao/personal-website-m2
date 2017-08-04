@@ -10,3 +10,4 @@ Personal Website, mark 2
 - [ ] Update Production Stack
 - [ ] Figure out why React Router adds a new history state when I click the link to the page I am already on (is it because of favicon request?)
 - [ ] Figure out Favicon packaging with Webpack
+- [ ] Learn how to make svg assets (personal logo, etc.)
