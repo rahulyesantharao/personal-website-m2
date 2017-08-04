@@ -14,7 +14,7 @@ class HomePage extends React.Component {
             <span>Rahul</span><br/>
             <span>Yesantharao</span>
           </h1>
-          <h2><span>Student, Programmer, Artist</span></h2>
+          <h2><span>./Student/Programmer/Artist</span></h2>
         </section>
       </div>
     );
