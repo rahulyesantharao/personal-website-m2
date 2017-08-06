@@ -7,7 +7,9 @@ Personal Website, mark 2
   - [x] Style Navbar
     - [x] Basic responsiveness
     - [x] Mobile Navigation Drawer
-  - [ ] Use React for animation stuff instead of vanilla CSS
+    - [ ] Make navigation bar disable rest of website
+    - [ ] Make navigation bar close after page change
+  - [x] Use React for animation stuff instead of vanilla CSS
   - [ ] Create Responsive Setup (Grid System?)
 - [x] Figure out svg, png, jpg packaging with Webpack - use require() when specifying src in JSX
 - [ ] Update Production Stack
