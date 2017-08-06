@@ -13,14 +13,14 @@ class App extends React.Component {
     this.setState((prevState) => {
       return Object.assign({}, prevState, {home: true});
     });
-    console.log("HOME!: " + this.state.home); // eslint-disable-line no-console
+    // console.log("HOME!: " + this.state.home); // eslint-disable-line no-console
     // document.getElementById("app").className="home";
   }
   unsetHome() {
     this.setState((prevState) => {
       return Object.assign({}, prevState, {home: false});
     });
-    console.log("NOT HOME!"); // eslint-disable-line no-console
+    // console.log("NOT HOME!"); // eslint-disable-line no-console
     // document.getElementById("app").className="not-home";
   }
   toggleMenu() {
