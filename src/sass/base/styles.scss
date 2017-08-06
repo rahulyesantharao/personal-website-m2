@@ -59,3 +59,16 @@ a {
     display: none !important;
   }
 }
+
+.page-wrapper {
+  transition: all 0.3s ease;
+}
+
+.page-0 {
+  opacity: 0;
+  z-index: 1;
+}
+
+.page-1 {
+  opacity: 1;
+}

@@ -7,6 +7,7 @@ class HomePage extends React.Component {
   }
 
   render() {
+    // console.log(this.props.status);
     return (
       <div className="homePage">
         <section className="banner">
