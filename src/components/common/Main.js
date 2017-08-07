@@ -1,8 +1,10 @@
+/* eslint-disable react/no-children-prop */
 import React from 'react';
 import {Route/*, Switch*/} from 'react-router-dom';
 import HomePage from '../home/HomePage';
 import AboutPage from '../about/AboutPage';
 import ProjectsPage from '../projects/ProjectsPage';
+// import NotFoundPage from './NotFoundPage';
 import PropTypes from 'prop-types';
 // import PageWrapper from './PageWrapper';
 import PageWrapper2 from './PageWrapper2';
@@ -17,7 +19,6 @@ import PageWrapper2 from './PageWrapper2';
 const Main = (props) => { //console.log("******************");
   return(
   <main className={props.isHome?"home":""}>
-      {/* <Switch> */}
         <Route exact path="/" children={({ match, ...rest }) => (
           <PageWrapper2 mounted={match} home={true} page="Home">
             <HomePage setHome={props.setHome} unsetHome={props.unsetHome} {...rest}/>
@@ -33,11 +34,16 @@ const Main = (props) => { //console.log("******************");
             <ProjectsPage {...rest}/>
           </PageWrapper2>
         )}/>
+        {/* <Route component={NotFoundPage}/> */}
+        {/* <Route children={({ match, ...rest }) => (
+          <PageWrapper2 mounted={match} home={false} page="NotFound">
+            <NotFoundPage {...rest}/>
+          </PageWrapper2>
+        )}/> */}
         {/* <Route exact path="/" render={() => <HomePageWrapped setHome={props.setHome} unsetHome={props.unsetHome}/>}/> */}
         {/* <Route exact path="/about" component={AboutPageWrapped}/> */}
         {/* <Route exact path="/projects" component={ProjectsPageWrapped}/> */}
         {/* <Route component={404Page}/> - The 404 page, will match if nothing else did because no path => always match  */}
-      {/* </Switch> */}
   </main>
 )};
 
