@@ -49,7 +49,7 @@ class PageWrapper2 extends React.Component {
       // console.log(newProps.page + ": componentWillReceiveProps: mounted: " + newProps.mounted);
       if(newProps.mounted) { // show the element
         if(!this.state.show) this.setShow("willReceiveProps");
-        setTimeout(() => this.setShowClass("willReceiveProps"), 300);
+        setTimeout(() => this.setShowClass("willReceiveProps"), 150);
       } else {
         this.unsetShowClass("willReceiveProps");
       }
@@ -67,7 +67,7 @@ class PageWrapper2 extends React.Component {
     console.log(this.props.page + ": componentDidMount");
     if(this.props.mounted) { // show the element
       this.setShow("didMount");
-      setTimeout(() => this.setShowClass("didMount"), 300);
+      setTimeout(() => this.setShowClass("didMount"), 150);
     } else {
       // this.unsetShowClass();
     }
