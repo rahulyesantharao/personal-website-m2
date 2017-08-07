@@ -2,9 +2,16 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+const homeStyle = {
+  position: 'fixed',
+  right: '0',
+  left: '0',
+  top: '0'
+}
+
 const Header = (props) => (
   <header>
-    <nav className="navbar">
+    <nav className="navbar" style={props.isHome?homeStyle:{}}>
       <div className={props.menuOpen?"navbar-menu-drawer is-active":"navbar-menu-drawer"}>
           <div className="navbar-item">
             <NavLink exact to="/about" activeClassName="active" onClick={props.toggleMenu}>ABOUT</NavLink>
@@ -46,7 +53,7 @@ const Header = (props) => (
 );
 
 Header.propTypes = {
-  // isHome: PropTypes.bool.isRequired,
+  isHome: PropTypes.bool.isRequired,
   menuOpen: PropTypes.bool.isRequired,
   toggleMenu: PropTypes.func.isRequired
 }

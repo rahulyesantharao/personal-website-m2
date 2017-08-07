@@ -35,7 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header menuOpen={this.state.menu} toggleMenu={this.toggleMenu.bind(this)}/>
+        <Header menuOpen={this.state.menu} toggleMenu={this.toggleMenu.bind(this)} isHome={this.state.home}/>
         <Main isHome={this.state.home} setHome={this.setHome.bind(this)} unsetHome={this.unsetHome.bind(this)}/>
         <Footer isHome={this.state.home}/>
       </div>
