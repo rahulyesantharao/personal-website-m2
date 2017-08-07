@@ -45,12 +45,17 @@ class PageWrapper2 extends React.Component {
     }
   }
 
+
   componentWillReceiveProps(newProps) {
     if(newProps.mounted!=this.props.mounted) {
       // console.log(newProps.page + ": componentWillReceiveProps: mounted: " + newProps.mounted);
       if(newProps.mounted) { // show the element
-        if(!this.state.show) this.setShow("willReceiveProps");
+        if(!this.state.show) {
+          setTimeout(() => this.setShow("willReceiveProps"), 200); // ** DON'T RENDER UNTIL AFTER THE PREVIOUS PAGE HAS UNLOADED ENTIRELY, gets rid of the need for absolute positioning
+          // this.setShow("willReceiveProps");
+        }
         setTimeout(() => this.setShowClass("willReceiveProps"), 200);
+        // this.setShowClass("willReceiveProps");
       } else {
         this.unsetShowClass("willReceiveProps");
       }
@@ -61,6 +66,7 @@ class PageWrapper2 extends React.Component {
     // console.log(this.props.page + ": transitionEnd: mounted: " + this.props.mounted);
     if(!this.props.mounted) {
       this.unsetShow("transitionEnd");
+      // this.unsetAbs();
     }
   }
 
