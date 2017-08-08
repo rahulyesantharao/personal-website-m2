@@ -1,0 +1,14 @@
+.projectsPage {
+  a {
+    color: white;
+    position: relative;
+  }
+}
+.project-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.25rem 0.25rem;
+  background-color: rgba(0,0,0,0.7);
+}
