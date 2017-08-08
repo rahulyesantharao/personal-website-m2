@@ -7,7 +7,6 @@ const homeStyle = {
     left: '0px',
     right: '0px'
 };
-//className={props.isHome?"home":""}
 
 const Footer = (props) => (
   <footer style={props.isHome?homeStyle:{}}>
