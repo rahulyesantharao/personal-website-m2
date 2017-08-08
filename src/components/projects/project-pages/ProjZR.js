@@ -1,12 +1,11 @@
 import React from 'react';
 import ProjectFooter from '../ProjectFooter';
+import ProjectHeader from '../ProjectHeader';
 
 const ProjZR = () => {
   return (
     <div>
-      <div className="columns">
-        <h2 className="column is-12-mobile is-8-tablet is-6-desktop">ZeroRobotics 2014 High School Tournament</h2>
-      </div>
+      <ProjectHeader name="ZeroRobotics 2014 High School International Tournament"/>
       <ProjectFooter/>
     </div>
   )

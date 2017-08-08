@@ -18,42 +18,42 @@ const ProjectsPage = () => {
         <h1 className="column is-12-mobile is-8-tablet is-6-desktop"><span>Projects</span></h1>
       </div>
       <Route exact path="/projects" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="Projects">
+        <PageAnimationWrapper mounted={match} home={false} page="Projects">
           <ProjectsDisplay {...rest}/>
         </PageAnimationWrapper>
       )}/>
       <Route exact path="/projects/ZeroRobotics" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="ZeroRobotics | Projects">
+        <PageAnimationWrapper mounted={match} home={false} page="ZeroRobotics | Projects">
           <ProjZR {...rest}/>
         </PageAnimationWrapper>
       )}/>
       <Route exact path="/projects/FindR" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="FindR | Projects">
+        <PageAnimationWrapper mounted={match} home={false} page="FindR | Projects">
           <ProjFindR {...rest}/>
         </PageAnimationWrapper>
       )}/>
       <Route exact path="/projects/Recyclo" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="Recyclo | Projects">
+        <PageAnimationWrapper mounted={match} home={false} page="Recyclo | Projects">
           <ProjRecyclo {...rest}/>
         </PageAnimationWrapper>
       )}/>
       <Route exact path="/projects/MoveOver" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="MoveOver | Projects">
+        <PageAnimationWrapper mounted={match} home={false} page="MoveOver | Projects">
           <ProjMoveOver {...rest}/>
         </PageAnimationWrapper>
       )}/>
       <Route exact path="/projects/CLHSOrchestra" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="CLHS Orchestra | Projects">
+        <PageAnimationWrapper mounted={match} home={false} page="CLHS Orchestra | Projects">
           <ProjCLHSOrch {...rest}/>
         </PageAnimationWrapper>
       )}/>
       <Route exact path="/projects/Polymap" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="Polymap | Projects">
+        <PageAnimationWrapper mounted={match} home={false} page="Polymap | Projects">
           <ProjPolymap {...rest}/>
         </PageAnimationWrapper>
       )}/>
       <Route exact path="/projects/PersonalWebsite" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="Personal Website | Projects">
+        <PageAnimationWrapper mounted={match} home={false} page="Personal Website | Projects">
           <ProjPersonalWebsite {...rest}/>
         </PageAnimationWrapper>
       )}/>
