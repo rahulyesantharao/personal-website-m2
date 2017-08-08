@@ -1,0 +1,17 @@
+// Classes for PageWrapper
+
+// basic page
+.page-wrapper {
+  transition: all 0.18s ease;
+}
+
+// not visible page
+.page-0 {
+  opacity: 0;
+  z-index: 1;
+}
+
+// visible page
+.page-1 {
+  opacity: 1;
+}

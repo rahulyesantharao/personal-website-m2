@@ -1,7 +1,7 @@
+// Home page container
 .homePage {
   height: 100%;
-  // padding-top: 2rem;
-  background-image: url(https://lh3.googleusercontent.com/PRl70TN-jfaRYH4NUOM9qlkA9cD6sA18aX60PTGZk36Lb9BnYmarfyM8GXEXZJqJ-xClfR4TmBy4kMg=w3840-h1837-rw); //url(https://s-media-cache-ak0.pinimg.com/originals/9b/d5/90/9bd59004ca57caab828728a181a17208.jpg); // 2b669b tint, using http://www167.lunapic.com/editor/
+  background-image: url(https://lh6.googleusercontent.com/-_25J1nzyvoNRPv4KUqw0GU7VhVnNwxjvJmTMoEO77ysLFF8mjHIBFuYj5UR8myYbiBw52BlUiJAI2A=w1716-h1291-rw); // 2b669b tint, using http://www167.lunapic.com/editor/
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,7 +19,7 @@
     @include desktop {
       padding-right: 2 * $screen-gap;
     }
-    h1 {
+    h1 { // Make the header bigger than regular h1
       font-size: 3rem;
       line-height: 3.8rem;
       @include tablet {
@@ -30,11 +30,8 @@
         font-size: 7rem;
         line-height: 9rem;
       }
-      span {
-        background-color: black;
-      }
     }
-    h2 {
+    h2 { // Make the header bigger than regular h2
       overflow-wrap: break-word;
       word-wrap: break-word;
       font-size: 1rem;
@@ -51,12 +48,5 @@
         background-color: black;
       }
     }
-  }
-}
-
-main.home {
-  .page-1 {
-    // height: 100%;
-    // position: static;
   }
 }

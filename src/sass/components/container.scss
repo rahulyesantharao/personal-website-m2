@@ -1,9 +1,13 @@
+// Content container classes
+
+// Centers page with a $screen-gap padding on left and right
 .container-fluid {
   margin: 0 auto;
   padding-left: $screen-gap;
   padding-right: $screen-gap;
 }
 
+// Centers page with a fixed with for each breakpoint
 .container {
   @extend .container-fluid;
   @include tablet {

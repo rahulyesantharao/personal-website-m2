@@ -2,15 +2,9 @@
 .navbar {
   // basic navbar styling
   z-index: 998;
-
   padding: 1rem;
-  // background-color: rgba(black, 0.2);
   font-weight: $font-weight-bold;
   display: flex;
-  // &.home {
-    // background-color: rgba(black, 0.1);
-    // box-shadow: none;
-  // }
   // basic navlink styling
   a {
     color: $color-nav-link;
@@ -30,11 +24,9 @@
 .navbar-menu-drawer {
   background-color: rgba(red, 0.1);
   position: fixed;
-  // margin-top: 3rem;
   margin: -1rem;
   padding: 5rem 3rem;
   max-width: 100%;
-  // margin-left: -1rem;
   height: 100%;
   transform: translateX(-120%);
   transition: 0.3s all ease;
@@ -179,8 +171,6 @@ $line-length: 20px;
 @include touch {
   .navbar-menu-drawer {
     &.is-active {
-      // top: 0px;
-      // display: block;
       transform: translateX(0px);
     }
   }

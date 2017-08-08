@@ -4,6 +4,7 @@
  * - https://code.tutsplus.com/tutorials/quick-tip-create-your-own-simple-resetcss-file--net-206
  * - http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
  * - https://meyerweb.com/eric/tools/css/reset/
+ * - https://gist.github.com/murtaugh/5247154 - Cursor reset?
  */
 
 // BASIC RESETS
@@ -45,8 +46,6 @@ ol, ul, li {
 :focus {
   outline: none;
 }
-
-// https://gist.github.com/murtaugh/5247154 - Cursor reset?
 
 // HTML5 fixes for old browsers
 main, nav, section, header, footer {
