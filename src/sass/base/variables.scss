@@ -48,7 +48,7 @@ $screen-fullhd: 1344px +  (2*$screen-gap);
 }
 
 @mixin tablet-only { // only tablet
-  @media screen and (min-width: $tablet) and (max-width: $screen-desktop - 1px) {
+  @media screen and (min-width: $screen-tablet) and (max-width: $screen-desktop - 1px) {
     @content;
   }
 }

@@ -9,9 +9,9 @@ import Project3 from './Project3';
 
 const ProjectsPage = () => {
   return (
-    <section className="container-fluid">
-      <div className="columns">
-        <h1 className="column is-12-mobile is-8-tablet is-offset-2-tablet is-6-desktop is-offset-3-desktop"><span>Projects</span></h1>
+    <section className="container">
+      <div className="columns is-centered">
+        <h1 className="column is-12-mobile is-8-tablet is-6-desktop"><span>Projects</span></h1>
       </div>
       <Route exact path="/projects" children={({ match, ...rest }) => (
         <PageAnimationWrapper mounted={match} home={true} page="Projects">

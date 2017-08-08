@@ -2,10 +2,12 @@ import React from 'react';
 
 const AboutPage = () => {
   return (
-    <section className="container-fluid">
-      <div className="columns">
-        <h1 className="column is-12-mobile is-8-tablet is-offset-2-tablet is-6-desktop is-offset-3-desktop"><span>About Me</span></h1>
-        <div className="column is-12-mobile is-8-tablet is-offset-2-tablet is-6-desktop is-offset-3-desktop">
+    <section className="container">
+      <div className="columns is-centered">
+        <h1 className="column is-12-mobile is-8-tablet is-6-desktop"><span>About Me</span></h1>
+      </div>
+      <div className="columns is-centered">
+        <div className="column is-12-mobile is-8-tablet is-6-desktop">
           <div className="image-rounded">
             <img src={require('../../images/rahul_speech_pbk.jpg')} style={{margin:"auto"}}/>
           </div>

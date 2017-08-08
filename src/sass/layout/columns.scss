@@ -1,12 +1,19 @@
-.column-container {
+.columns {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
   margin-top: -0.75rem;
+  &.is-centered {
+    justify-content: center;
+  }
+  flex-wrap: wrap;
   &:last-child {
     margin-bottom: -0.75rem;
   }
   &:not(:last-child) {
     margin-bottom: -0.75rem;
+  }
+  @include tablet {
+    display: flex;
   }
 }
 
@@ -16,6 +23,7 @@
   @include mobile {
     @for $i from 1 through 12 {
       &.is-#{$i}-mobile {
+        flex: none;
         width: ($i / 12) * 100%
       }
       &.is-offset-#{$i}-mobile {
@@ -23,9 +31,10 @@
       }
     }
   }
-  @include tablet {
+  @include tablet-only {
     @for $i from 1 through 12 {
       &.is-#{$i}-tablet {
+        flex: none;
         width: ($i / 12) * 100%
       }
       &.is-offset-#{$i}-tablet {
@@ -36,6 +45,7 @@
   @include desktop {
     @for $i from 1 through 12 {
       &.is-#{$i}-desktop {
+        flex: none;
         width: ($i / 12) * 100%
       }
       &.is-offset-#{$i}-desktop {
