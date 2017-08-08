@@ -26,6 +26,7 @@ app.use(webpackDevMiddleware(CONFIG.COMPILER, {
 // For any request, send the src/index.html
 app.get('*', function(req, res) {
   console.log(test + '. Sending index.html');
+  console.log(req);
   test++;
   res.sendFile(path.join(__dirname, '../src/index.html'));
 });
