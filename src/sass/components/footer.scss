@@ -10,7 +10,9 @@ main {
 
 // Footer styling
 footer {
-  text-align: center;
+  p {
+    text-align: center;
+  }
   padding: 1rem;
   color: $color-nav-link;
 }
