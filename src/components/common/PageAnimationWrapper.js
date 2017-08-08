@@ -3,7 +3,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class PageWrapper2 extends React.Component {
+const timeoutTime = 180;
+
+class PageAnimationWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,78 +14,76 @@ class PageWrapper2 extends React.Component {
     }
   }
 
-
   showState() {
     return "(" + this.state.show + ", " + this.state.className + ")";
   }
-  setShow(caller) {
-    console.log(this.props.page + ": " + caller + ">setShow" + this.showState());
+  setShow() {
+    // console.log(this.props.page + ": " + caller + ">setShow" + this.showState());
     this.setState((prevState) => (
       Object.assign({}, prevState, {show: true})
     ));
   }
-  unsetShow(caller) {
-    console.log(this.props.page + ": " + caller + ">unsetShow" + this.showState());
+  unsetShow() {
+    // console.log(this.props.page + ": " + caller + ">unsetShow" + this.showState());
     this.setState((prevState) => (
       Object.assign({}, prevState, {show: false})
     ));
   }
-  setShowClass(caller) {
+  setShowClass() {
     if(!(this.state.className==="page-1")) {
-      console.log(this.props.page + ": " + caller + ">setShowClass" + this.showState());
+      // console.log(this.props.page + ": " + caller + ">setShowClass" + this.showState());
       this.setState((prevState) => (
         Object.assign({}, prevState, {className: "page-1"})
       ))
     }
   }
-  unsetShowClass(caller) {
+  unsetShowClass() {
     if(!(this.state.className==="page-0")) {
-      console.log(this.props.page + ": " + caller + ">unsetShowClass" + this.showState());
+      // console.log(this.props.page + ": " + caller + ">unsetShowClass" + this.showState());
       this.setState((prevState) => (
         Object.assign({}, prevState, {className: "page-0"})
       ));
     }
   }
 
-
+  componentDidMount() {
+    // console.log(this.props.page + ": componentDidMount");
+    if(this.props.mounted) { // show the element
+      this.setShow();
+      setTimeout(() => this.setShowClass(), timeoutTime);
+    } else {
+      // this.unsetShowClass();
+    }
+  }
   componentWillReceiveProps(newProps) {
     if(newProps.mounted!=this.props.mounted) {
       // console.log(newProps.page + ": componentWillReceiveProps: mounted: " + newProps.mounted);
       if(newProps.mounted) { // show the element
         if(!this.state.show) {
-          setTimeout(() => this.setShow("willReceiveProps"), 200); // ** DON'T RENDER UNTIL AFTER THE PREVIOUS PAGE HAS UNLOADED ENTIRELY, gets rid of the need for absolute positioning
-          // this.setShow("willReceiveProps");
+          setTimeout(() => this.setShow(), timeoutTime); // ** DON'T RENDER UNTIL AFTER THE PREVIOUS PAGE HAS UNLOADED ENTIRELY, gets rid of the need for absolute positioning
         }
-        setTimeout(() => this.setShowClass("willReceiveProps"), 200);
-        // this.setShowClass("willReceiveProps");
+        setTimeout(() => this.setShowClass(), timeoutTime);
       } else {
-        this.unsetShowClass("willReceiveProps");
+        this.unsetShowClass();
       }
     }
   }
-
   transitionEnd() {
     // console.log(this.props.page + ": transitionEnd: mounted: " + this.props.mounted);
     if(!this.props.mounted) {
-      this.unsetShow("transitionEnd");
-      // this.unsetAbs();
-    }
-  }
-
-  componentDidMount() {
-    console.log(this.props.page + ": componentDidMount");
-    if(this.props.mounted) { // show the element
-      this.setShow("didMount");
-      setTimeout(() => this.setShowClass("didMount"), 200);
-    } else {
-      // this.unsetShowClass();
+      this.unsetShow();
     }
   }
 
   render() {
-    // if(this.state.show) return null;
+    let pageStyle = {};
+    if(this.state.show) {
+      if(this.props.home) {
+        pageStyle = {height: '100%', paddingTop: '0'};
+      }
+    }
     return (
-      <div className={"page-wrapper " + this.state.className} onTransitionEnd={()=>this.transitionEnd()} style={(this.props.home && this.state.show) ? {height: '100%', position: 'static'} : {}}>
+      <div className={"page-wrapper " + this.state.className} onTransitionEnd={()=>this.transitionEnd()} style={pageStyle}>
         {this.state.show && this.props.children}
       </div>
     );
@@ -91,11 +91,11 @@ class PageWrapper2 extends React.Component {
 
 }
 
-PageWrapper2.propTypes = {
+PageAnimationWrapper.propTypes = {
   mounted: PropTypes.object.isRequired,
   children: PropTypes.element.isRequired,
   page: PropTypes.string.isRequired,
   home: PropTypes.bool.isRequired
 }
 
-export default PageWrapper2;
+export default PageAnimationWrapper;
