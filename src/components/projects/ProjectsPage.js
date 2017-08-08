@@ -3,9 +3,13 @@ import React from 'react';
 import {Route/*, Switch*/} from 'react-router-dom';
 import PageAnimationWrapper from '../common/PageAnimationWrapper';
 import ProjectsDisplay from './ProjectsDisplay'
-import Project1 from './Project1';
-import Project2 from './Project2';
-import Project3 from './Project3';
+import ProjZR from './project-pages/ProjZR';
+import ProjFindR from './project-pages/ProjFindR';
+import ProjRecyclo from './project-pages/ProjRecyclo';
+import ProjMoveOver from './project-pages/ProjMoveOver';
+import ProjCLHSOrch from './project-pages/ProjCLHSOrch';
+import ProjPolymap from './project-pages/ProjPolymap';
+import ProjPersonalWebsite from './project-pages/ProjPersonalWebsite';
 
 const ProjectsPage = () => {
   return (
@@ -18,19 +22,39 @@ const ProjectsPage = () => {
           <ProjectsDisplay {...rest}/>
         </PageAnimationWrapper>
       )}/>
-      <Route exact path="/projects/project1" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="Project1 | Projects">
-          <Project1 {...rest}/>
+      <Route exact path="/projects/ZeroRobotics" children={({ match, ...rest }) => (
+        <PageAnimationWrapper mounted={match} home={true} page="ZeroRobotics | Projects">
+          <ProjZR {...rest}/>
         </PageAnimationWrapper>
       )}/>
-      <Route exact path="/projects/project2" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="Project2 | Projects">
-          <Project2 {...rest}/>
+      <Route exact path="/projects/FindR" children={({ match, ...rest }) => (
+        <PageAnimationWrapper mounted={match} home={true} page="FindR | Projects">
+          <ProjFindR {...rest}/>
         </PageAnimationWrapper>
       )}/>
-      <Route exact path="/projects/project3" children={({ match, ...rest }) => (
-        <PageAnimationWrapper mounted={match} home={true} page="Project3 | Projects">
-          <Project3 {...rest}/>
+      <Route exact path="/projects/Recyclo" children={({ match, ...rest }) => (
+        <PageAnimationWrapper mounted={match} home={true} page="Recyclo | Projects">
+          <ProjRecyclo {...rest}/>
+        </PageAnimationWrapper>
+      )}/>
+      <Route exact path="/projects/MoveOver" children={({ match, ...rest }) => (
+        <PageAnimationWrapper mounted={match} home={true} page="MoveOver | Projects">
+          <ProjMoveOver {...rest}/>
+        </PageAnimationWrapper>
+      )}/>
+      <Route exact path="/projects/CLHSOrchestra" children={({ match, ...rest }) => (
+        <PageAnimationWrapper mounted={match} home={true} page="CLHS Orchestra | Projects">
+          <ProjCLHSOrch {...rest}/>
+        </PageAnimationWrapper>
+      )}/>
+      <Route exact path="/projects/Polymap" children={({ match, ...rest }) => (
+        <PageAnimationWrapper mounted={match} home={true} page="Polymap | Projects">
+          <ProjPolymap {...rest}/>
+        </PageAnimationWrapper>
+      )}/>
+      <Route exact path="/projects/PersonalWebsite" children={({ match, ...rest }) => (
+        <PageAnimationWrapper mounted={match} home={true} page="Personal Website | Projects">
+          <ProjPersonalWebsite {...rest}/>
         </PageAnimationWrapper>
       )}/>
     </section>
