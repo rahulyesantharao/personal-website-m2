@@ -6,6 +6,7 @@ const AboutPage = () => {
       <div className="columns">
         <h1 className="column is-12-mobile is-8-tablet is-offset-2-tablet is-6-desktop is-offset-3-desktop"><span>About Me</span></h1>
         <div className="column is-12-mobile is-8-tablet is-offset-2-tablet is-6-desktop is-offset-3-desktop">
+          <img src={require('../../images/rahul_speech_pbk.jpg')} style={{margin:"auto"}}/>
           <p>
             Hi! I&rsquo;m Rahul. I am a developer, aspiring engineer, and (amateur) musician.
             I am passionate about anything and everything relating to technlogy.

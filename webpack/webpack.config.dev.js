@@ -45,11 +45,15 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              // limit: 8192,
-              // mimetype: 'image/svg+xml'
+              limit: 8192,
+              mimetype: 'image/svg+xml'
             }
           }
         ]
+      },
+      {
+        test: /\.(png|gif|jpe?g)$/,
+        loader: 'file-loader?name=[path][hash].[ext]'
       }
     ]
   },
