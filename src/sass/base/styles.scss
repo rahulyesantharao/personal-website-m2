@@ -71,3 +71,9 @@ p {
     display: none !important;
   }
 }
+
+.image-rounded {
+  img {
+    border-radius: 50%;
+  }
+}
