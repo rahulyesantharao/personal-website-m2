@@ -11,8 +11,8 @@
   .banner {
     max-width: 100%;
     text-align: right;
-    color: white;
-    font-family: 'Zilla Slab', monospace;
+    // color: white;
+    // font-family: 'Zilla Slab', monospace;
     padding-right: $screen-gap;
     position: absolute;
     right: 0;
@@ -44,9 +44,9 @@
         font-size: 3rem;
         line-height: 4rem;
       }
-      span {
-        background-color: black;
-      }
+      // span {
+      //   background-color: black;
+      // }
     }
   }
 }

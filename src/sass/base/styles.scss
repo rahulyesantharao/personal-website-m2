@@ -45,12 +45,14 @@ a {
 }
 
 // Basic heading styles
-h1 {
-  font-size: $font-size-h1;
-  font-family: 'Zilla Slab', monospace;
-  span {
-    background-color: black;
-    color: white;
+@for $index from 1 through 2 {
+  h#{$index}{
+    font-size: nth($font-size-h, $index);
+    font-family: 'Zilla Slab', monospace;
+    span {
+      background-color: black;
+      color: white;
+    }
   }
 }
 
