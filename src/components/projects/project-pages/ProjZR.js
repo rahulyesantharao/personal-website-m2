@@ -6,7 +6,7 @@ const ProjZR = () => {
   return (
     <div>
       <ProjectHeader name="ZeroRobotics 2014 High School International Tournament"/>
-      <ProjectFooter/>
+      <ProjectFooter type="website" link="http://zerorobotics.mit.edu/tournaments/16/info/90/0/"/>
     </div>
   )
 };

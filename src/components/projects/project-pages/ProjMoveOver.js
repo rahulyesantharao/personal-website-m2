@@ -6,7 +6,7 @@ const ProjMoveOver = () => {
   return (
     <div>
       <ProjectHeader name="MoveOver Android App"/>
-      <ProjectFooter/>
+      <ProjectFooter type="devpost" link="https://devpost.com/software/move-over"/>
     </div>
   )
 };

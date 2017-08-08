@@ -6,7 +6,7 @@ const ProjCLHSOrch = () => {
   return (
     <div>
       <ProjectHeader name="CLHS Orchestra Website"/>
-      <ProjectFooter/>
+      <ProjectFooter type="website" link="http://lakeorchestra.org/"/>
     </div>
   )
 };

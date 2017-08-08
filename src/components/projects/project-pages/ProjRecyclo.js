@@ -5,8 +5,8 @@ import ProjectHeader from '../ProjectHeader';
 const ProjRecyclo = () => {
   return (
     <div>
-      <ProjectHeader name="Recyclo Website"/>
-      <ProjectFooter/>
+      <ProjectHeader name="Recyclo Game"/>
+      <ProjectFooter type="github" link="https://github.com/rahulyesantharao/recyclo"/>
     </div>
   )
 };

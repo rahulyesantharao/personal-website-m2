@@ -6,7 +6,7 @@ const ProjPersonalWebsite = () => {
   return (
     <div>
       <ProjectHeader name="Personal Website"/>
-      <ProjectFooter/>
+      <ProjectFooter type="github" link="#"/>
     </div>
   )
 };

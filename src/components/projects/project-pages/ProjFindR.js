@@ -6,7 +6,7 @@ const ProjFindR = () => {
   return (
     <div>
       <ProjectHeader name="FindR Chrome Extension"/>
-      <ProjectFooter/>
+      <ProjectFooter type="website" link="https://chrome.google.com/webstore/detail/findr/bidnaaogcagbdidehabnjfedabckhdgc"/>
     </div>
   )
 };

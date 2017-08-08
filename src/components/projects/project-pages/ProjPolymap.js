@@ -6,7 +6,7 @@ const ProjPolymap = () => {
   return (
     <div>
       <ProjectHeader name="Polymap Android App"/>
-      <ProjectFooter/>
+      <ProjectFooter type="devpost" link="https://devpost.com/software/polymap-8lrejv"/>
     </div>
   )
 };

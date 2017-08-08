@@ -59,7 +59,6 @@ a {
 // Basic paragraph styles
 p {
   padding: 0.5rem 0;
-  text-align: justify;
 }
 
 // Responsive classes
@@ -79,4 +78,17 @@ p {
   img {
     border-radius: 50%;
   }
+}
+
+.is-flex {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+.is-right {
+  margin-left: auto;
+}
+
+.is-justified {
+  text-align: justify;
 }
