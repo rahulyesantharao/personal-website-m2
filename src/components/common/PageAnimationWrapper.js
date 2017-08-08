@@ -50,7 +50,8 @@ class PageAnimationWrapper extends React.Component {
     // console.log(this.props.page + ": componentDidMount");
     if(this.props.mounted) { // show the element
       this.setShow();
-      setTimeout(() => this.setShowClass(), timeoutTime);
+      this.setShowClass()
+      // setTimeout(() => this.setShowClass(), timeoutTime);
     } else {
       // this.unsetShowClass();
     }

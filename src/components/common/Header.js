@@ -17,7 +17,7 @@ const Header = (props) => (
             <NavLink exact to="/about" activeClassName="active" onClick={props.toggleMenu}>ABOUT</NavLink>
           </div>
           <div className="navbar-item">
-            <NavLink exact to="/projects" activeClassName="active" onClick={props.toggleMenu}>PROJECTS</NavLink>
+            <NavLink to="/projects" activeClassName="active" onClick={props.toggleMenu}>PROJECTS</NavLink>
           </div>
       </div>
       <div className="navbar-left">
@@ -37,7 +37,7 @@ const Header = (props) => (
             <NavLink exact to="/about" activeClassName="active">ABOUT</NavLink>
           </div>
           <div className="navbar-item">
-            <NavLink exact to="/projects" activeClassName="active">PROJECTS</NavLink>
+            <NavLink to="/projects" activeClassName="active">PROJECTS</NavLink>
           </div>
       </div>
       <div className="navbar-right">

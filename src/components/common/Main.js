@@ -20,7 +20,7 @@ const Main = (props) => {
             <AboutPage {...rest}/>
           </PageAnimationWrapper>
         )}/>
-        <Route exact path="/projects" children={({ match, ...rest }) => (
+        <Route path="/projects" children={({ match, ...rest }) => (
           <PageAnimationWrapper mounted={match} home={false} page="Projects">
             <ProjectsPage {...rest}/>
           </PageAnimationWrapper>
