@@ -12,9 +12,9 @@ Personal Website, mark 2
   - [x] Use React for animation stuff instead of vanilla CSS
   - [x] Create Responsive Setup (Grid System?)
   - [x] Make the PageWrapper change the document.title
-- [ ] Projects Page
+- [x] Projects Page
   - [x] Make Project Footer have links to the GitHub/DevPost/Project (based on type (Github/Devpost/Project) and link props)
-  - [ ] Make the ProjectLinks react to hover
+  - [x] Make the ProjectLinks react to hover
 - [ ] Production
   - [x] Figure out svg, png, jpg packaging with Webpack - use require() when specifying src in JSX
   - [ ] Update graphics (desk picture, projects pictures)
