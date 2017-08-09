@@ -1,14 +1,29 @@
 .projectsPage {
   a {
+    img {
+      transition: 0.2s all ease;
+    }
+    &:hover, &:focus {
+      img {
+        opacity: 0.5;
+      }
+      .project-title {
+        background-color: rgba(0,0,0,0.5);
+      }
+    }
+    &:link, &:visited, &:active {
+      color: white;
+    }
     color: white;
     position: relative;
   }
 }
 .project-title {
+  transition: 0.2s all ease;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 3px;
   padding: 0.25rem 0.25rem;
   background-color: rgba(0,0,0,0.7);
 }
