@@ -4,18 +4,20 @@ Personal Website, mark 2
 ### TODO
 - [ ] Styling
   - [x] Finish Basic Site Styles
-  - [x] Style Navbar
+  - [x] Use React for animation stuff instead of vanilla CSS
+  - [x] Create Responsive Setup (Grid System?)
+  - [x] Make the PageWrapper change the document.title
+  - [ ] Style typography, site colors, consolidate variables (don't set actual colors anywhere: move everything to variables)
+- [x] Style Navbar
     - [x] Basic responsiveness
     - [x] Mobile Navigation Drawer
     - [x] Make navigation bar disable rest of website
     - [x] Make navigation bar close after page change
     - [x] Fix z-indices
-  - [x] Use React for animation stuff instead of vanilla CSS
-  - [x] Create Responsive Setup (Grid System?)
-  - [x] Make the PageWrapper change the document.title
 - [x] Projects Page
   - [x] Make Project Footer have links to the GitHub/DevPost/Project (based on type (Github/Devpost/Project) and link props)
   - [x] Make the ProjectLinks react to hover
+- [ ] On all animations, use will-change and instead of 'all' only put the values that will change
 - [ ] Production
   - [x] Figure out svg, png, jpg packaging with Webpack - use require() when specifying src in JSX
   - [ ] Update graphics (desk picture, projects pictures)
