@@ -7,8 +7,9 @@ Personal Website, mark 2
   - [x] Style Navbar
     - [x] Basic responsiveness
     - [x] Mobile Navigation Drawer
-    - [ ] Make navigation bar disable rest of website
+    - [x] Make navigation bar disable rest of website
     - [x] Make navigation bar close after page change
+    - [ ] Fix z-indices
   - [x] Use React for animation stuff instead of vanilla CSS
   - [x] Create Responsive Setup (Grid System?)
   - [x] Make the PageWrapper change the document.title
