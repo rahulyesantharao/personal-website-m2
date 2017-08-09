@@ -22,6 +22,7 @@ class PageAnimationWrapper extends React.Component {
     this.setState((prevState) => (
       Object.assign({}, prevState, {show: true})
     ));
+    // document.title = this.props.page + " | Rahul Yesantharao";
   }
   unsetShow() {
     // console.log(this.props.page + ": " + caller + ">unsetShow" + this.showState());
@@ -61,6 +62,7 @@ class PageAnimationWrapper extends React.Component {
       // console.log(newProps.page + ": componentWillReceiveProps: mounted: " + newProps.mounted);
       if(newProps.mounted) { // show the element
         if(!this.state.show) {
+          document.title = this.props.home?("Rahul Yesantharao"):(this.props.page + " | Rahul Yesantharao");
           setTimeout(() => this.setShow(), timeoutTime); // ** DON'T RENDER UNTIL AFTER THE PREVIOUS PAGE HAS UNLOADED ENTIRELY, gets rid of the need for absolute positioning
         }
         setTimeout(() => this.setShowClass(), timeoutTime);

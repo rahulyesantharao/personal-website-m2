@@ -11,12 +11,14 @@ Personal Website, mark 2
     - [x] Make navigation bar close after page change
   - [x] Use React for animation stuff instead of vanilla CSS
   - [x] Create Responsive Setup (Grid System?)
-  - [ ] Make the PageWrapper change the document.title
+  - [x] Make the PageWrapper change the document.title
 - [ ] Projects Page
   - [x] Make Project Footer have links to the GitHub/DevPost/Project (based on type (Github/Devpost/Project) and link props)
   - [ ] Make the ProjectLinks react to hover
 - [ ] Production
   - [x] Figure out svg, png, jpg packaging with Webpack - use require() when specifying src in JSX
+  - [ ] Update graphics (desk picture, projects pictures)
+    - [ ] Make the projects pictures all the same size square (500x500 px?)
   - [ ] Update Production Stack
   - [ ] Figure out why React Router adds a new history state when I click the link to the page I am already on (is it because of favicon request?)
   - [ ] Figure out Favicon packaging with Webpack
