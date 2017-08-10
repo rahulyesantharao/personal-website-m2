@@ -33,7 +33,7 @@ body {
 
 // Basic link styles
 a {
-  will-change: color;
+  // will-change: color;
   transition: color $transition-time ease;
   color: $color-link;
   cursor: pointer;

@@ -28,7 +28,7 @@
   padding: 5rem 3rem;
   max-width: 100%;
   height: 100%;
-  will-change: transform;
+  // will-change: transform;
   transform: translateX(-120%);
   transition: transform $transition-time ease;
   z-index: 999;
@@ -45,7 +45,7 @@
       left: 0px;
       width: 100%;
       height: 2px;
-      will-change: transform, background-color;
+      // will-change: transform, background-color;
       transition: transform $navlink-transition-time ease, background-color $navlink-transition-time ease;
       transform: translateX(-110%);
       background-color: $color-nav-link-hover;
@@ -106,17 +106,17 @@ $line-length: 20px;
     width: 100%;
     transform: rotate(0deg);
     &:nth-child(1) {
-      will-change: background-color, top, transform;
+      // will-change: background-color, top, transform;
       transition: background-color $transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
       top: 0px;
     }
     &:nth-child(2) {
-      will-change: background-color, opacity, left;
+      // will-change: background-color, opacity, left;
       transition: background-color $transition-time ease-in-out, opacity $transition-time ease-in-out, left $transition-time ease-in-out;
       top: (1+$line-between)*$line-height;
     }
     &:nth-child(3) {
-      will-change: background-color, top, transform;
+      // will-change: background-color, top, transform;
       transition: background-color $transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
       top: (2+2*$line-between)*$line-height;
     }
@@ -203,7 +203,7 @@ $line-length: 20px;
       &:before {
         position: absolute;
         content: "";
-        will-change: transform, background-color;
+        // will-change: transform, background-color;
         transition: transform $navlink-transition-time ease, background-color $navlink-transition-time ease;
         bottom: 0px;
         left: 0px;
