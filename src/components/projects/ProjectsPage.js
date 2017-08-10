@@ -15,7 +15,9 @@ const ProjectsPage = () => {
   return (
     <section className="container">
       <div className="columns is-centered">
-        <h1 className="column is-12-mobile is-8-tablet is-6-desktop"><span>Projects</span></h1>
+        <div className="column is-12-mobile is-8-tablet is-6-desktop">
+          <h1><span>Projects</span></h1>
+        </div>
       </div>
       <Route exact path="/projects" children={({ match, ...rest }) => (
         <PageAnimationWrapper mounted={match} home={false} page="Projects">

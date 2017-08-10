@@ -18,7 +18,7 @@ Personal Website, mark 2
   - [x] Make Project Footer have links to the GitHub/DevPost/Project (based on type (Github/Devpost/Project) and link props)
   - [x] Make the ProjectLinks react to hover
 - [ ] On all animations, use will-change and instead of 'all' only put the values that will change
-- [ ] Make all .column elements into divs, rather than text-level elements
+- [x] Make all .column elements into divs, rather than text-level elements
 - [ ] Production
   - [x] Figure out svg, png, jpg packaging with Webpack - use require() when specifying src in JSX
   - [ ] Update graphics (desk picture, projects pictures)
