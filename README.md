@@ -2,12 +2,13 @@
 Personal Website, mark 2
 
 ### TODO
-- [x] Styling
+- [ ] Styling
   - [x] Finish Basic Site Styles
   - [x] Use React for animation stuff instead of vanilla CSS
   - [x] Create Responsive Setup (Grid System?)
   - [x] Make the PageWrapper change the document.title
-  - [x] Style typography, site colors, consolidate variables (don't set actual colors anywhere: move everything to variables)
+  - [ ] Style typography, site colors - make it responsive and get bigger/smaller with screen size, similar to banner on homePage
+  - [x]consolidate variables (don't set actual colors anywhere: move everything to variables)
 - [x] Style Navbar
     - [x] Basic responsiveness
     - [x] Mobile Navigation Drawer
