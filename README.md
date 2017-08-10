@@ -26,8 +26,8 @@ Personal Website, mark 2
   - [x] Figure out svg, png, jpg packaging with Webpack - use require() when specifying src in JSX
   - [ ] Update graphics (desk picture, projects pictures)
     - [x] Make the projects pictures all the same size square (350x350 px?) - used picresize.com for resizing and tinypng.com/kraken.io for optimization
-  - [ ] Use PostCSS or some autoprefixer or something
-  - [ ] Update Production Stack
+  - [x] Use PostCSS or some autoprefixer or something
+  - [x] Update Production Stack
   - [ ] Figure out why React Router adds a new history state when I click the link to the page I am already on (is it because of favicon request?)
   - [ ] Figure out Favicon packaging with Webpack
 - [ ] Future

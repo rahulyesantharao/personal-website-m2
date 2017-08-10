@@ -25,7 +25,7 @@ app.use(express.static('dist'));
 
 // For any request, send the src/index.html
 app.get('*', function(req, res) {
-  console.log(MESSAGE(test + '. Sending index.html'));
+  console.log(MESSAGE(test + ': ' + req.url + '; Sending index.html'));
   test++;
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
