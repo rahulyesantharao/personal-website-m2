@@ -35,6 +35,11 @@
         margin-left: ($i / 12) * 100%
       }
     }
+    &.is-12-mobile {
+      &:not(:last-child) {
+        padding-bottom: 0;
+      }
+    }
   }
   @include tablet-only {
     @for $i from 1 through 12 {

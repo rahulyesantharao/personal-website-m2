@@ -45,7 +45,7 @@ a {
 }
 
 // Basic heading styles
-@for $index from 1 through 2 {
+@for $index from 1 through 3 {
   h#{$index}{
     font-size: nth($font-size-h, $index);
     font-family: 'Zilla Slab', monospace;
@@ -55,10 +55,16 @@ a {
     }
   }
 }
+h3 {
+  font-weight: $font-weight-bold;
+  // padding: 0.3rem 0;
+}
 
 // Basic paragraph styles
-p {
-  padding: 0.5rem 0;
+.text {
+  p {
+    padding: 0.5rem 0;
+  }
 }
 
 // Responsive classes
