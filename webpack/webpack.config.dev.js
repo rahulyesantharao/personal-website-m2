@@ -53,7 +53,11 @@ module.exports = {
       },
       {
         test: /\.(png|gif|jpe?g)$/,
-        loader: 'file-loader?name=[path][hash].[ext]'
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+          name: '[path][hash].[ext]'
+        }
       }
     ]
   },

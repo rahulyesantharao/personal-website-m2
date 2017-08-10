@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const open = require('open');
 const chalk = require('chalk');
-const compression = require('compression');
+// const compression = require('compression');
 
 let test = 1;
 
@@ -21,7 +21,7 @@ const app = express();
 
 // Use the express.static middleware to make the server serve static content
 app.use(express.static('dist'));
-app.use(compression);
+// app.use(compression);
 
 // For any request, send the src/index.html
 app.get('*', function(req, res) {

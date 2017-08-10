@@ -8,7 +8,7 @@ Personal Website, mark 2
   - [x] Create Responsive Setup (Grid System?)
   - [x] Make the PageWrapper change the document.title
   - [ ] Style typography, site colors - make it responsive and get bigger/smaller with screen size, similar to banner on homePage
-  - [x]consolidate variables (don't set actual colors anywhere: move everything to variables)
+  - [x] consolidate variables (don't set actual colors anywhere: move everything to variables)
 - [x] Style Navbar
     - [x] Basic responsiveness
     - [x] Mobile Navigation Drawer
