@@ -1,7 +1,9 @@
 const path = require('path');
+// const glob = require('glob');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const PurifyCSSPlugin = require('purifycss-webpack');
 
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('production')
@@ -111,6 +113,9 @@ module.exports = {
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css'
     }),
+    // new PurifyCSSPlugin({
+    //   paths: glob.sync(path.join(CONFIG.SRC, '*.js'))
+    // }),
     new webpack.optimize.UglifyJsPlugin(), // minify JS
   ]
 };
