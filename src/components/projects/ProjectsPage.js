@@ -15,7 +15,7 @@ const ProjectsPage = () => {
   return (
     <section className="container">
       <div className="columns is-centered">
-        <div className="column is-12-mobile is-8-tablet is-6-desktop">
+        <div className="column is-12-mobile is-8-tablet is-8-desktop">
           <h1><span>Projects</span></h1>
         </div>
       </div>

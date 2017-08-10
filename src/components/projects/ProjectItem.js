@@ -7,7 +7,7 @@ const ProjectItem = (props) => {
       <div className="column is-12-mobile is-2-tablet is-2-desktop">
         <h3>{props.title}</h3>
       </div>
-      <div className="column is-12-mobile is-6-tablet is-4-desktop">
+      <div className="column is-12-mobile is-6-tablet is-6-desktop">
         {props.children}
       </div>
     </div>

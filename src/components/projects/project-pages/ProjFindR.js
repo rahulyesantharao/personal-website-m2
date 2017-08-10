@@ -11,12 +11,17 @@ const ProjFindR = () => {
         <p>
           Personal Project, March-April, 2016
         </p>
-        <p>
-          FindR was my first real software project. It is a Chrome extension that gives users full find and replace capabilities
-          inside of Google Chrome. It also includes several &#34;bonus&#34; features, such as regular expression support for searching,
-          premade options, like &#34;Match Words&#34; or &#34;Match Case&#34;, and, most importantly, the ability to change
-          text inside of input fields.
-        </p>
+        <div className="text">
+          <p>
+            FindR was my first real software project. It is a Chrome extension that gives users full find and replace capabilities
+            inside of Google Chrome. It also includes several &#34;bonus&#34; features, such as regular expression support for searching,
+            premade options, like &#34;Match Words&#34; or &#34;Match Case&#34;, and, most importantly, the ability to change
+            text inside of input fields.
+          </p>
+          <p>
+            FindR currently has over 1,300 users!
+          </p>
+        </div>
         <ul>
           <li>
             <p>
