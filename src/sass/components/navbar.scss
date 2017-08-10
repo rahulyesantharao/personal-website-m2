@@ -28,25 +28,29 @@
   padding: 5rem 3rem;
   max-width: 100%;
   height: 100%;
+  will-change: transform;
   transform: translateX(-120%);
-  transition: 0.3s all ease;
+  transition: transform $transition-time ease;
   z-index: 999;
   .navbar-item a { // sliding line effect under menu links
     overflow: hidden;
-    &:after, &:before {
-      position: absolute;
-      transition: 0.3s all ease;
-      content: "";
-    }
+    // &:after, &:before {
+    //   position: absolute;
+    //   content: "";
+    // }
     &:before {
+      position: absolute;
+      content: "";
       bottom: 0px;
       left: 0px;
       width: 100%;
       height: 2px;
+      will-change: transform, background-color;
+      transition: transform $navlink-transition-time ease, background-color $navlink-transition-time ease;
       transform: translateX(-110%);
       background-color: $color-nav-link-hover;
     }
-    &:hover:before, &.active:before {
+    &:focus:before, &:hover:before, &.active:before {
       transform: translateX(0px);
       background-color: $color-nav-link-pressed;
     }
@@ -69,8 +73,8 @@
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   #logo {
-    font-size: 1.4rem;
-    font-family: 'Zilla Slab', monospace;
+    font-size: $font-size-logo;
+    font-family: $font-family-headings;
     span {
       color: white;
       background-color: black;
@@ -99,16 +103,21 @@ $line-length: 20px;
     left: 0;
     border-radius: $line-height;
     opacity: 1;
-    transition: all 0.3s ease-in-out;
     width: 100%;
     transform: rotate(0deg);
     &:nth-child(1) {
+      will-change: background-color, top, transform;
+      transition: background-color $transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
       top: 0px;
     }
     &:nth-child(2) {
+      will-change: background-color, opacity, left;
+      transition: background-color $transition-time ease-in-out, opacity $transition-time ease-in-out, left $transition-time ease-in-out;
       top: (1+$line-between)*$line-height;
     }
     &:nth-child(3) {
+      will-change: background-color, top, transform;
+      transition: background-color $transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
       top: (2+2*$line-between)*$line-height;
     }
   }
@@ -145,26 +154,6 @@ $line-length: 20px;
 .navbar-menu-desktop {
   // mobile-first: menu starts hidden
   display: none;
-  .navbar-item a { // sliding line effect under menu links
-    overflow: hidden;
-    &:after, &:before {
-      position: absolute;
-      transition: 0.3s all ease;
-      content: "";
-    }
-    &:before {
-      bottom: 0px;
-      left: 0px;
-      width: 100%;
-      height: 2px;
-      transform: translateX(-110%);
-      background-color: $color-nav-link-hover;
-    }
-    &:hover:before, &.active:before {
-      transform: translateX(0px);
-      background-color: $color-nav-link-pressed;
-    }
-  }
 }
 
 #sidenav-overlay {
@@ -173,9 +162,11 @@ $line-length: 20px;
   left: 0;
   right: 0;
   height: 100%;
+  background-color: transparent;
   background-color: rgba(0,0,0,0.5);
   z-index: -1;
-  transition: opacity 0.25s ease, z-index 0.25s step-end;
+  will-change: opacity, z-index;
+  transition: opacity $transition-time ease, z-index $transition-time step-end;
   opacity: 0;
 }
 
@@ -190,7 +181,7 @@ $line-length: 20px;
     &.is-active {
       opacity: 1;
       z-index: 995;
-      transition: opacity 0.25s ease, z-index 0.25s step-start;
+      transition: opacity $transition-time ease, z-index $transition-time step-start;
     }
   }
 }
@@ -203,9 +194,33 @@ $line-length: 20px;
     justify-content: flex-start;
     margin-right: auto;
     margin-left: 0.75rem;
+    .navbar-item a { // sliding line effect under menu links
+      overflow: hidden;
+      // &:after, &:before {
+      //   position: absolute;
+      //   content: "";
+      // }
+      &:before {
+        position: absolute;
+        content: "";
+        will-change: transform, background-color;
+        transition: transform $navlink-transition-time ease, background-color $navlink-transition-time ease;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 2px;
+        transform: translateX(-110%);
+        background-color: $color-nav-link-hover;
+      }
+      &:focus:before, &:hover:before, &.active:before {
+        transform: translateX(0px);
+        background-color: $color-nav-link-pressed;
+      }
+    }
   }
   .navbar-left {
     #logo {
+      border-right: 2px solid black;
       border-right: 2px solid rgba(black, 0.1);
       padding-right: 1.5rem;
     }

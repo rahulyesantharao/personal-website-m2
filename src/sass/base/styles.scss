@@ -2,7 +2,7 @@
 html {
   background-color: $color-bg;
   color: $color-font;
-  font-family: $font-primary;
+  font-family: $font-family-primary;
   line-height: $line-height-primary;
   height: 100%;
 }
@@ -30,7 +30,8 @@ body {
 
 // Basic link styles
 a {
-  transition: all 0.3s ease;
+  will-change: color;
+  transition: color $transition-time ease;
   color: $color-link;
   cursor: pointer;
   &:link, &:visited {
@@ -48,7 +49,7 @@ a {
 @for $index from 1 through 3 {
   h#{$index}{
     font-size: nth($font-size-h, $index);
-    font-family: 'Zilla Slab', monospace;
+    font-family: $font-family-headings;
     span {
       background-color: black;
       color: white;

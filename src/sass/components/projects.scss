@@ -1,7 +1,8 @@
 .projectsPage {
   a {
     img {
-      transition: 0.2s all ease;
+      will-change: opacity;
+      transition: opacity $transition-time ease;
     }
     &:hover, &:focus {
       img {
@@ -19,11 +20,13 @@
   }
 }
 .project-title {
-  transition: 0.2s all ease;
+  will-change: background-color;
+  transition: background-color $transition-time ease;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 3px;
   padding: 0.25rem 0.25rem;
+  background-color: black;
   background-color: rgba(0,0,0,0.7);
 }

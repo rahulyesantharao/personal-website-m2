@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const timeoutTime = 180;
+const timeoutTime = 185;
 
 class PageAnimationWrapper extends React.Component {
   constructor(props) {

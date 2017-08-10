@@ -2,7 +2,8 @@
 
 // basic page
 .page-wrapper {
-  transition: all 0.18s ease;
+  will-change: opacity;
+  transition: opacity $page-transition-time ease;
 }
 
 // not visible page
