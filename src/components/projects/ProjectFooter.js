@@ -9,7 +9,7 @@ const ProjectFooter = (props) => {
 
   return (
     <div className="columns is-centered">
-      <div className="column is-12-mobile is-8-tablet is-8-desktop is-flex">
+      <div className="column is-12-mobile is-8-tablet is-8-desktop is-flex text">
         <p><Link to="/projects">&#8592; Back To Projects</Link></p>
         <p className="is-right"><a href={props.link} target="_blank" rel="noopener noreferrer">{exploreText}</a></p>
       </div>
