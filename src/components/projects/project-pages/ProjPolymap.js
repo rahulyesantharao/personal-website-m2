@@ -27,13 +27,36 @@ const ProjPolymap = () => {
             or share.
           </p>
         </div>
-        <p>
-          Java
-          SQLLite
-          Android Studio
-          Google Places API
-          Google Vision API
-        </p>
+        <ul>
+          <li>
+            <p>
+              <b>Java</b>
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>SQLite</b> - Used as a database to store all the locations the user has looked up using the app.
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>Android Studio</b>
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>Google Vision API</b> - Used for the image recognition in the app - returns a list of descriptions of the picture
+              taken of the landmark.
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>Google Places API</b> - Used for the place recognition functionality - based on the keywords returned from the Vision API
+              and the current location of the user, the Google Places API returns a list of potential options for the landmark. Using this list,
+              we determined the most likely match.
+            </p>
+          </li>
+        </ul>
       </ProjectDescription>
       <ProjectFooter type="devpost" link="https://devpost.com/software/polymap-8lrejv"/>
     </div>

@@ -10,10 +10,10 @@
 // Centers page with a fixed with for each breakpoint
 .container {
   @extend .container-fluid;
-  @include tablet {
-    max-width: $screen-tablet - (2 * $screen-gap);
-    width: $screen-tablet - (2 * $screen-gap);
-  }
+  // @include tablet {
+  //   max-width: $screen-tablet - (2 * $screen-gap);
+  //   width: $screen-tablet - (2 * $screen-gap);
+  // }
   @include desktop {
     max-width: $screen-desktop - (2 * $screen-gap);
     width: $screen-desktop - (2 * $screen-gap);

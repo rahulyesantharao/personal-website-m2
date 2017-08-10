@@ -9,6 +9,9 @@ html {
 
 body {
   font-size: 1rem;
+  @include tablet {
+    font-size: 1.15rem;
+  }
   height: 100%;
 }
 
@@ -42,6 +45,20 @@ a {
   }
   &:active {
     color: $color-link-pressed;
+  }
+}
+
+// List styles
+ul {
+  li {
+    display: flex;
+    &:before {
+      padding-right: 0.5rem;
+      flex-grow: 0;
+      font-weight: $font-weight-bold;
+      font-family: $font-family-headings;
+      content: '\003E'; //\00BB
+    }
   }
 }
 

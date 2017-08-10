@@ -17,12 +17,29 @@ const ProjFindR = () => {
           premade options, like &#34;Match Words&#34; or &#34;Match Case&#34;, and, most importantly, the ability to change
           text inside of input fields.
         </p>
-        <p>
-          HTML5
-          CSS3
-          JQuery
-          <a href="http://zerorobotics.mit.edu/" target="_blank" rel="noopener noreferrer">Material Design Lite</a>
-        </p>
+        <ul>
+          <li>
+            <p>
+              <b>HTML5</b>
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>CSS3</b>
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>JQuery</b>
+            </p>
+          </li>
+          <li>
+            <p>
+              <b><a href="https://getmdl.io/" target="_blank" rel="noopener noreferrer">Material Design Lite</a></b> - I used
+              the Material Design Lite framework to provide the extension quick and nice Material Design styles.
+            </p>
+          </li>
+        </ul>
       </ProjectDescription>
       <ProjectFooter type="website" link="https://chrome.google.com/webstore/detail/findr/bidnaaogcagbdidehabnjfedabckhdgc"/>
     </div>

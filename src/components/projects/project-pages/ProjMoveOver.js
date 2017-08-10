@@ -18,10 +18,24 @@ const ProjMoveOver = () => {
           system to reduce the high rate of emergency vehicle accidents. I developed the client app and worked on the overall UI/UX. We placed
           second in the Houston-area hackathon and fifth in the global IncubateX hackathon.
         </p>
-        <p>
-          Java
-          Android Studio
-        </p>
+        <ul>
+          <li>
+            <p>
+              <b>Java</b>
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>Android Studio</b>
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>FireBase</b> - Used to provide the backend; tracks the locations of the broadcasting vehicles and pushes out alerts to the
+              client apps.
+            </p>
+          </li>
+        </ul>
       </ProjectDescription>
       <ProjectFooter type="devpost" link="https://devpost.com/software/move-over"/>
     </div>
