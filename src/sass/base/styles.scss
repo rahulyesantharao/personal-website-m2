@@ -82,6 +82,9 @@ h3 {
 .text {
   p {
     padding: 0.5rem 0;
+    &:first-child {
+      padding-top: 1.0rem;
+    }
   }
 }
 
@@ -98,10 +101,13 @@ h3 {
   }
 }
 
-.image-rounded {
-  img {
-    border-radius: 50%;
-  }
+#aboutHeader {
+  background-image: url('../images/rahul_speech_pbk.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 90px 0;
 }
 
 .is-flex {

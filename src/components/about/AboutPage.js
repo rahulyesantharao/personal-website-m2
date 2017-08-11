@@ -2,15 +2,22 @@ import React from 'react';
 
 const AboutPage = () => {
   return (
-    <section className="container">
-      <div className="columns is-centered">
-        <h1 className="column is-12-mobile is-8-tablet is-8-desktop"><span>About Me</span></h1>
+    <div>
+    <section className="container-fluid" id="aboutHeader">
+      <div className="container">
+        <div className="columns is-centered">
+          <div className="column is-12-mobile is-8-tablet is-8-desktop">
+            <h1><span>About Me</span></h1>
+          </div>
+        </div>
       </div>
+    </section>
+    <section className="container">
+      {/* <div className="columns is-centered">
+        <h1 className="column is-12-mobile is-8-tablet is-8-desktop"><span>About Me</span></h1>
+      </div> */}
       <div className="columns is-centered">
         <div className="column is-12-mobile is-8-tablet is-8-desktop">
-          <div className="image-rounded">
-            <img src={require('../../images/rahul_speech_pbk.jpg')} style={{margin:"auto"}}/>
-          </div>
           <div className="text">
             <p>
               Hi! I&rsquo;m Rahul. I am a developer, aspiring engineer, and (amateur) musician.
@@ -38,6 +45,7 @@ const AboutPage = () => {
         </div>
       </div>
     </section>
+    </div>
   )
 }
 
