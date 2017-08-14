@@ -4,17 +4,17 @@
 // Site Colors
 $color-primary: blue;
 $color-accent: #2b669b;
-$color-bg: white;
+$color-bg: #f2f2f2; //white;
 $color-selection: lighten(#2b669b, 30%);
 
 // Font Colors
-$color-font: black;
+$color-font: #797979; //black;
 
 $color-link: #2b669b;
 $color-link-hover: darken($color-link, 10%);
 $color-link-pressed: darken($color-link, 25%);
 
-$color-nav-link: black;
+$color-nav-link: $color-font; //black;
 $color-nav-link-hover: $color-nav-link;
 $color-nav-link-pressed: $color-nav-link;
 
