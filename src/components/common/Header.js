@@ -40,14 +40,15 @@ const Header = (props) => (
             <NavLink to="/projects" activeClassName="active">PROJECTS</NavLink>
           </div>
       </div>
-      <div className="navbar-right">
-        <div className="navbar-item">
-          <a href="https://github.com/rahulyesantharao/" target="_blank" rel="noopener noreferrer">
+      {/* <div className="navbar-right"> */}
+        {/* <div className="navbar-item"> */}
+          {/* <a href="https://github.com/rahulyesantharao/" target="_blank" rel="noopener noreferrer"> */}
             {/* <img src={require('../../svg/github.svg')}/> */}
-            GH
-          </a>
-        </div>
-      </div>
+            {/* GH */}
+            {/* <i className="fa fa-github" aria-hidden="true"></i> */}
+          {/* </a> */}
+        {/* </div> */}
+      {/* </div> */}
     </nav>
   </header>
 );

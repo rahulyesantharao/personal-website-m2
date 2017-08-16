@@ -11,9 +11,18 @@ const homeStyle = {
 
 const Footer = (props) => (
   <footer style={props.isHome?homeStyle:{}}>
-        <p>
-          &#169; 2017 Rahul Yesantharao
-        </p>
+    <p>
+      <a href="https://github.com/rahulyesantharao/" target="_blank" rel="noopener noreferrer">
+        <i className="fa fa-github" aria-hidden="true"></i>
+      </a>
+      &nbsp;&nbsp;
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+      </a>
+    </p>
+    <p>
+      <i className="fa fa-pencil" aria-hidden="true"></i> with <i className="fa fa-code" aria-hidden="true"></i> by Rahul Yesantharao
+    </p>
   </footer>
 );
 
