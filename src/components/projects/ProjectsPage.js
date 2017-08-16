@@ -14,7 +14,7 @@ import ProjPersonalWebsite from './project-pages/ProjPersonalWebsite';
 const ProjectsPage = () => {
   return (
     <div>
-    <section className="container-fluid" id="aboutHeader">
+    <section className="container-fluid" id="projectsHeader">
       <div className="container">
         <div className="columns is-centered">
           <div className="column is-12-mobile is-8-tablet is-8-desktop">
