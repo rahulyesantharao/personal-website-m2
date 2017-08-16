@@ -34,7 +34,7 @@ const AboutPage = () => {
               I also competed in the USA Math and Computing Olympiads. In addition, I was the principal cellist
               of the <a href="http://lakeorchestra.org/" target="_blank" rel="noopener noreferrer">CLHS Orchestra</a> and played in
               the Texas All State Orchestras
-              (2015, <a href="https://www.youtube.com/watch?v=tWuUI1-IBZ8" target="_blank" rel="noopener noreferrer">2016</a>, <a href="https://www.youtube.com/watch?v=AGhqUWLgGeM" target="_blank" rel="noopener noreferrer">20</a><a href="https://www.youtube.com/watch?v=wCT5MtY9xtw" target="_blank" rel="noopener noreferrer">17</a>).
+              (<a href="https://www.youtube.com/playlist?list=PLUSRfoOcUe4YXuqdjf3Ata8lNqEiTy3cx" target="_blank" rel="noopener noreferrer">2015</a>, <a href="https://www.youtube.com/watch?v=tWuUI1-IBZ8" target="_blank" rel="noopener noreferrer">2016</a>, <a href="https://www.youtube.com/watch?v=AGhqUWLgGeM" target="_blank" rel="noopener noreferrer">20</a><a href="https://www.youtube.com/watch?v=wCT5MtY9xtw" target="_blank" rel="noopener noreferrer">17</a>).
             </p>
             <p>
               In my free time, I love reading just about any book I can get my hands on (but especially Harry Potter) and watching movies,
