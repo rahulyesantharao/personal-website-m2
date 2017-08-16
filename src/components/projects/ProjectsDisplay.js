@@ -31,7 +31,7 @@ const ProjectsDisplay = () => {
       </div>
       <div className="column is-6-mobile is-4-tablet is-2-desktop">
         <ProjectsLink to="/projects/Polymap" text="Polymap">
-          <img src={require('../../images/project-tiles/min/clhsorch.min.png')}/>
+          <img src={require('../../images/project-tiles/min/polymap.min.png')}/>
         </ProjectsLink>
       </div>
       <div className="column is-6-mobile is-offset-2-tablet is-4-tablet is-2-desktop">
