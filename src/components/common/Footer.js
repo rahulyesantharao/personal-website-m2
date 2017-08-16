@@ -12,12 +12,16 @@ const homeStyle = {
 const Footer = (props) => (
   <footer style={props.isHome?homeStyle:{}}>
     <p>
-      <a href="https://github.com/rahulyesantharao/" target="_blank" rel="noopener noreferrer">
-        <i className="fa fa-github" aria-hidden="true"></i>
+      <a href="https://twitter.com/rahulyrao1" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <i className="fa fa-twitter-square" aria-hidden="true" title="View Rahul's Twitter"></i>
       </a>
       &nbsp;&nbsp;
-      <a href="#" target="_blank" rel="noopener noreferrer">
-        <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+      <a href="https://github.com/rahulyesantharao/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i className="fa fa-github" aria-hidden="true" title="View Rahul's GitHub"></i>
+      </a>
+      &nbsp;&nbsp;
+      <a href="www.linkedin.com/in/rahulyesantharao" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i className="fa fa-linkedin-square" aria-hidden="true" title="View Rahul's LinkedIn"></i>
       </a>
     </p>
     <p>
