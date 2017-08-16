@@ -12,9 +12,10 @@ Personal Website, mark 2
 - Set up dev/dist servers
 - Set up NPM scripts
 - Set up framework (e.g. React)
+- Use https://realfavicongenerator.net/ for favicons
 
 ### TODO
-- [ ] Styling
+- [x] Styling
   - [x] Finish Basic Site Styles
   - [x] Use React for animation stuff instead of vanilla CSS
   - [x] Create Responsive Setup (Grid System?)
@@ -36,13 +37,14 @@ Personal Website, mark 2
 
 - [ ] Production
   - [x] Figure out svg, png, jpg packaging with Webpack - use require() when specifying src in JSX
-  - [ ] Update graphics (desk picture, projects pictures)
+  - [x] Update graphics (desk picture, projects pictures)
     - [x] Make the projects pictures all the same size square (350x350 px?) - used picresize.com for resizing and tinypng.com/kraken.io for optimization
   - [x] Use PostCSS or some autoprefixer or something
   - [x] Update Production Stack
-  - [ ] Figure out why React Router adds a new history state when I click the link to the page I am already on (is it because of favicon request?)
-  - [ ] Figure out Favicon packaging with Webpack
+  - [ ] Figure out why React Router adds a new history state when I click the link to the page I am already on
+  - [x] Figure out Favicon packaging with Webpack
 - [ ] Future
+  - [ ] Clean up project
   - [ ] Learn how to make svg assets (personal logo, etc.)
   - [ ] Update page transitions to TransitionGroup so that I can make a 404 Page
   - [ ] Cubic bezier custom transition functions
