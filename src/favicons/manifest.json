@@ -1,0 +1,19 @@
+{
+    "name": "Rahul Yesantharao",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=ngkk92kKld",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png?v=ngkk92kKld",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#2b669b",
+    "background_color": "#2b669b",
+    "start_url": "http://www.rahulyesantharao.com/",
+    "display": "standalone"
+}
