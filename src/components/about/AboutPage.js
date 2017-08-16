@@ -12,7 +12,7 @@ const AboutPage = () => {
         </div>
       </div>
     </section>
-    <section className="container">
+    <section className="container top-pad">
       {/* <div className="columns is-centered">
         <h1 className="column is-12-mobile is-8-tablet is-8-desktop"><span>About Me</span></h1>
       </div> */}
@@ -21,7 +21,7 @@ const AboutPage = () => {
           <div className="text">
             <p>
               Hi! I&rsquo;m Rahul. I am a developer, aspiring engineer, and (amateur) musician.
-              I am passionate about anything and everything relating to technlogy.
+              I am passionate about anything and everything relating to technology.
             </p>
             <p>
               I am a freshman at the Massachusetts Institute of Technology, studying Course 6-2 (Electrical Engineering and Computer Science).
@@ -38,8 +38,8 @@ const AboutPage = () => {
             </p>
             <p>
               In my free time, I love reading just about any book I can get my hands on (but especially Harry Potter) and watching movies,
-              both Bollywood and Hollywood and TV shows. Some of my favorites include the Marvel Cinematic Universe (Team Iron Man!),
-              Zootopia, and Sherlock. I also like watching tennis (#RafaNadal) and YouTube tech reviewers.
+              both Bollywood and Hollywood. Some of my favorites include the Marvel Cinematic Universe (Team Iron Man!),
+              Zootopia, and Sherlock. I also enjoy watching tennis (#RafaNadal) and YouTube tech reviewers.
             </p>
           </div>
         </div>

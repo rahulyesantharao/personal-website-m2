@@ -13,12 +13,22 @@ import ProjPersonalWebsite from './project-pages/ProjPersonalWebsite';
 
 const ProjectsPage = () => {
   return (
-    <section className="container">
-      <div className="columns is-centered">
+    <div>
+    <section className="container-fluid" id="aboutHeader">
+      <div className="container">
+        <div className="columns is-centered">
+          <div className="column is-12-mobile is-8-tablet is-8-desktop">
+            <h1><span>Projects</span></h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="container top-pad">
+      {/* <div className="columns is-centered">
         <div className="column is-12-mobile is-8-tablet is-8-desktop">
           <h1><span>Projects</span></h1>
         </div>
-      </div>
+      </div> */}
       <Route exact path="/projects" children={({ match, ...rest }) => (
         <PageAnimationWrapper mounted={match} home={false} page="Projects">
           <ProjectsDisplay {...rest}/>
@@ -60,6 +70,7 @@ const ProjectsPage = () => {
         </PageAnimationWrapper>
       )}/>
     </section>
+    </div>
   )
 }
 

@@ -84,11 +84,13 @@ h3 {
   p {
     padding: 0.5rem 0;
     &:first-child {
-      padding-top: 1.0rem;
+      padding-top: 0;
     }
   }
 }
-
+.top-pad {
+  padding-top: 1.5rem;
+}
 // Responsive classes
 @include desktop {
   .is-hidden-desktop {
