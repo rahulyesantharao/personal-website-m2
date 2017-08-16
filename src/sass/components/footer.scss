@@ -10,9 +10,10 @@ main {
 
 // Footer styling
 footer {
+  transition: color $page-transition-time ease;
   p {
     text-align: center;
   }
   padding: 1rem;
-  color: $color-nav-link;
+  color: $color-font;
 }

@@ -5,7 +5,8 @@ const homeStyle = {
     position: 'fixed',
     bottom: '0px',
     left: '0px',
-    right: '0px'
+    right: '0px',
+    color: 'white'
 };
 
 const Footer = (props) => (

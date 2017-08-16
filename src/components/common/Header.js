@@ -11,7 +11,7 @@ const homeStyle = {
 
 const Header = (props) => (
   <header>
-    <nav className="navbar" style={props.isHome?homeStyle:{}}>
+    <nav className={props.isHome?"navbar home":"navbar"} style={props.isHome?homeStyle:{}}>
       <div className={props.menuOpen?"navbar-menu-drawer is-active":"navbar-menu-drawer"}>
           <div className="navbar-item">
             <NavLink exact to="/about" activeClassName="active" onClick={props.toggleMenu}>ABOUT</NavLink>

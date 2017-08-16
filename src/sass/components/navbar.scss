@@ -1,4 +1,30 @@
 // Link Styles: https://codepen.io/EvyatarDa/pen/waKXMd
+@mixin link-color-nav {
+  color: $color-nav-link;
+  &:link, &:visited {
+    color: $color-nav-link;
+  }
+  &:hover, &:focus {
+    color: $color-nav-link;
+  }
+  &:active, &.active {
+    color: $color-nav-link;
+  }
+}
+
+@mixin link-color-font {
+  color: $color-font;
+  &:link, &:visited {
+    color: $color-font;
+  }
+  &:hover, &:focus {
+    color: $color-font;
+  }
+  &:active, &.active {
+    color: $color-font;
+  }
+}
+
 .navbar {
   // basic navbar styling
   z-index: 996;
@@ -7,17 +33,30 @@
   display: flex;
   // basic navlink styling
   a {
-    color: $color-nav-link;
     position: relative;
-    &:link, &:visited {
-      color: $color-nav-link;
+    @include link-color-nav;
+    transition: color $page-transition-time ease;
+  }
+}
+
+.home {
+  .navbar-burger {
+    span {
+      background-color: $color-nav-link;
     }
     &:hover, &:focus {
-      color: $color-nav-link-hover;
+      span {
+        background-color: $color-nav-link;
+      }
     }
-    &:active, &.active {
-      color: $color-nav-link-pressed;
-    }
+    // &.is-active {
+    //   span {
+    //     background-color: $color-nav-link;
+    //   }
+    // }
+  }
+  .navbar-right {
+    a{@include link-color-nav;}
   }
 }
 
@@ -46,13 +85,13 @@
       width: 100%;
       height: 2px;
       // will-change: transform, background-color;
-      transition: transform $navlink-transition-time ease, background-color $navlink-transition-time ease;
+      transition: transform $navlink-transition-time ease;//, background-color $navlink-transition-time ease;
       transform: translateX(-110%);
-      background-color: $color-nav-link-hover;
+      background-color: $color-nav-link;
     }
     &:focus:before, &:hover:before, &.active:before {
       transform: translateX(0px);
-      background-color: $color-nav-link-pressed;
+      // background-color: $color-nav-link;
     }
   }
 }
@@ -96,7 +135,7 @@ $line-length: 20px;
   height: (3+2*$line-between)*$line-height;
   width: $line-length;
   span {
-    background-color: $color-nav-link;
+    background-color: $color-font;
     display: block;
     height: $line-height;
     position: absolute;
@@ -107,29 +146,29 @@ $line-length: 20px;
     transform: rotate(0deg);
     &:nth-child(1) {
       // will-change: background-color, top, transform;
-      transition: background-color $transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
+      transition: background-color $page-transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
       top: 0px;
     }
     &:nth-child(2) {
       // will-change: background-color, opacity, left;
-      transition: background-color $transition-time ease-in-out, opacity $transition-time ease-in-out, left $transition-time ease-in-out;
+      transition: background-color $page-transition-time ease-in-out, opacity $transition-time ease-in-out, left $transition-time ease-in-out;
       top: (1+$line-between)*$line-height;
     }
     &:nth-child(3) {
       // will-change: background-color, top, transform;
-      transition: background-color $transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
+      transition: background-color $page-transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
       top: (2+2*$line-between)*$line-height;
     }
   }
   &:hover, &:focus {
     span {
-      background-color: $color-nav-link-hover;
+      background-color: $color-font;
     }
   }
   // When clicked
   &.is-active {
     span {
-      background-color: $color-nav-link-pressed;
+      background-color: $color-nav-link;
       &:nth-child(1) {
         top: 2*$line-height;
         transform: rotate(135deg);
@@ -149,6 +188,7 @@ $line-length: 20px;
 .navbar-right {
   display: flex;
   // align-items: center;
+  a {@include link-color-font;}
 }
 
 .navbar-menu-desktop {
@@ -187,6 +227,22 @@ $line-length: 20px;
 }
 
 @include desktop {
+  .navbar:not(.home) {
+    .navbar-menu-desktop, .navbar-menu-drawer {
+      .navbar-item a {
+        &:before {
+          background-color: $color-font;
+        }
+        &:focus:before, &:hover:before, &.active:before {
+          transform: translateX(0px);
+          background-color: $color-font;
+        }
+      }
+    }
+    a {
+      @include link-color-font;
+    }
+  }
   .navbar-menu-desktop {
     display: flex;
     flex-grow: 1;
@@ -204,17 +260,17 @@ $line-length: 20px;
         position: absolute;
         content: "";
         // will-change: transform, background-color;
-        transition: transform $navlink-transition-time ease, background-color $navlink-transition-time ease;
+        transition: transform $navlink-transition-time ease, background-color $page-transition-time ease;
         bottom: 0px;
         left: 0px;
         width: 100%;
         height: 2px;
         transform: translateX(-110%);
-        background-color: $color-nav-link-hover;
+        background-color: $color-nav-link;
       }
       &:focus:before, &:hover:before, &.active:before {
         transform: translateX(0px);
-        background-color: $color-nav-link-pressed;
+        // background-color: $color-nav-link;
       }
     }
   }
