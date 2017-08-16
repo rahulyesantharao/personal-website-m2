@@ -1,6 +1,18 @@
 # personal-website-m2
 Personal Website, mark 2
 
+### Environment Setup
+- Create Git Repo
+- Set up EditorConfig
+- Set up NPM Project
+- Set up Directory Structure
+- Install and setup Webpack (and config file)
+- Install and setup ESLint (and rc file)
+- Install and setup Babel (and rc file)
+- Set up dev/dist servers
+- Set up NPM scripts
+- Set up framework (e.g. React)
+
 ### TODO
 - [ ] Styling
   - [x] Finish Basic Site Styles
