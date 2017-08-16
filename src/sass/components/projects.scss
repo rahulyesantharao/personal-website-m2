@@ -21,6 +21,7 @@
 }
 .project-title {
   // will-change: background-color;
+  font-weight: normal !important;
   transition: background-color $transition-time ease;
   position: absolute;
   left: 0;

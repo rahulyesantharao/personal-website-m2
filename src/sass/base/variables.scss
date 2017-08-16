@@ -10,9 +10,9 @@ $color-selection: lighten(#2b669b, 30%);
 // Font Colors
 $color-font: #797979; //black;
 
-$color-link: #2b669b;
-$color-link-hover: darken($color-link, 10%);
-$color-link-pressed: darken($color-link, 25%);
+$color-link: lighten(#2b669b, 30%);
+$color-link-hover: darken($color-link, 30%);
+$color-link-pressed: darken($color-link, 60%);
 
 $color-nav-link: white; //black;
 // $color-nav-link-hover: $color-nav-link;

@@ -29,7 +29,7 @@
   // basic navbar styling
   z-index: 996;
   padding: 1rem;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-bold !important;
   display: flex;
   // basic navlink styling
   a {
@@ -187,6 +187,7 @@ $line-length: 20px;
 
 .navbar-right {
   display: flex;
+  font-size: 2rem;
   // align-items: center;
   a {@include link-color-font;}
 }
