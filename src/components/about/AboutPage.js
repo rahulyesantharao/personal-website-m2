@@ -19,7 +19,7 @@ const AboutPage = () => {
       <div className="columns is-centered">
         <div className="column is-12-mobile is-8-tablet is-8-desktop">
           <div className="text">
-            <p>
+            <p style={{paddingTop:'0'}}>
               Hi! I&rsquo;m Rahul. I am a developer, aspiring engineer, and (amateur) musician.
               I am passionate about anything and everything relating to technology.
             </p>
