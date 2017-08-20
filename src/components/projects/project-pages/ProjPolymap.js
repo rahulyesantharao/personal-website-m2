@@ -24,7 +24,7 @@ const ProjPolymap = () => {
             Over the course of the roughly 40 hour hackathon, my team of five developed an Android app, Polymap, that allows the user to simply
             point their phone at a landmark and instantaneously receive information about the landmark and a link to learn more. The app also tracks
             the landmarks that the user has visited and creates a map of the route that the user traveled over their journey for them to later export
-            or share.
+            or share. We took first place at the hackathon and also won Most Creative Product and Best Show of Technology.
           </p>
         </div>
         <ul>
