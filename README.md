@@ -43,6 +43,7 @@ Personal Website, mark 2
   - [x] Update Production Stack
   - [ ] Figure out why React Router adds a new history state when I click the link to the page I am already on
   - [x] Figure out Favicon packaging with Webpack
+  - [ ] Fix iPhone styling errors, add browserslistrc!!!
 - [ ] Future
   - [ ] Clean up project
   - [ ] Learn how to make svg assets (personal logo, etc.)
