@@ -39,6 +39,9 @@ const Header = (props) => (
           <div className="navbar-item">
             <NavLink to="/projects" activeClassName="active">PROJECTS</NavLink>
           </div>
+          <div className="navbar-item">
+            <a href="http://blog.rahulyesantharao.com/" target="_blank" rel="noopener noreferrer">BLOG</a>
+          </div>
       </div>
       {/* <div className="navbar-right"> */}
         {/* <div className="navbar-item"> */}
