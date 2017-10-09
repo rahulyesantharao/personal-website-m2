@@ -19,6 +19,9 @@ const Header = (props) => (
           <div className="navbar-item">
             <NavLink to="/projects" activeClassName="active" onClick={props.toggleMenu}>PROJECTS</NavLink>
           </div>
+          <div className="navbar-item">
+            <a href="http://blog.rahulyesantharao.com/" target="_blank" rel="noopener noreferrer">BLOG</a>
+          </div>
       </div>
       <div className="navbar-left">
         <div className="navbar-item is-hidden-desktop">
