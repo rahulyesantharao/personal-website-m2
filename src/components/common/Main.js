@@ -8,31 +8,44 @@ import PropTypes from 'prop-types';
 import PageAnimationWrapper from './PageAnimationWrapper';
 import NotFoundPage from './NotFoundPage.js';
 
-const Main = (props) => {
-  return(
-  <main className={props.isHome?"home":""}>
-        <Route exact path="/" children={({ match, ...rest }) => (
+class Main extends React.Component {
+  constructor(props) {
+    super(props)
+    this.found = false;
+  }
+  render() {
+    return(
+      <main className={this.props.isHome?"home":""}>
+        <Route exact path="/" children={({ match, ...rest }) => {
+          this.found = this.found || match;
+          return (
           <PageAnimationWrapper mounted={match} home={true} page="Home">
-            <HomePage setHome={props.setHome} unsetHome={props.unsetHome} {...rest}/>
+            <HomePage setHome={this.props.setHome} unsetHome={this.props.unsetHome} {...rest}/>
           </PageAnimationWrapper>
-        )}/>
-        <Route exact path="/about" children={({ match, ...rest }) => (
+        );}}/>
+        <Route exact path="/about" children={({ match, ...rest }) => {
+          this.found = this.found || match;
+          return (
           <PageAnimationWrapper mounted={match} home={false} page="About">
             <AboutPage {...rest}/>
           </PageAnimationWrapper>
-        )}/>
-        <Route path="/projects" children={({ match, ...rest }) => (
+        );}}/>
+        <Route path="/projects" children={({ match, ...rest }) => {
+          this.found = this.found || match;
+          return (
           <PageAnimationWrapper mounted={match} home={false} page="Projects">
             <ProjectsPage {...rest}/>
           </PageAnimationWrapper>
-        )}/>
-        <Route path="/404" children={({ match, ...rest }) => (
-          <PageAnimationWrapper mounted={match} home={false} page="Error 404 (Not Found!)">
+        );}}/>
+        <Route children={({ ...rest }) => (
+          <PageAnimationWrapper mounted={!this.found} home={false} page="Error 404 (Not Found!)">
             <NotFoundPage {...rest}/>
           </PageAnimationWrapper>
         )}/>
-  </main>
-)};
+      </main>
+    );
+  }
+}
 
 Main.propTypes = {
   setHome: PropTypes.func.isRequired,
