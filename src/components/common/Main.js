@@ -14,6 +14,7 @@ class Main extends React.Component {
     this.found = false;
   }
   render() {
+    this.found = false;
     return(
       <main className={this.props.isHome?"home":""}>
         <Route exact path="/" children={({ match, ...rest }) => {
