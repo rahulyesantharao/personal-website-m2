@@ -1,7 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import ProjectFooter from '../projects/ProjectFooter';
 
-const NotFoundPage = () => {
+const NotFoundPage = (props) => {
   let curURL = window.location.pathname;
+  if(props.projects) {
+    return (
+      <div>
+        <div className="columns is-centered">
+          <div className="column is-12-mobile is-8-tablet is-8-desktop">
+            <h2><span>Error 404</span></h2>
+          </div>
+          <div className="column is-12-mobile is-8-tablet is-8-desktop">
+            <p>Sorry! That project does not seem to exist.</p>
+          </div>
+        </div>
+        <ProjectFooter type="none" link=""/>
+      </div>
+    )
+  }
   return (
     <div>
     <section className="container-fluid">
@@ -26,6 +43,10 @@ const NotFoundPage = () => {
     </section>
     </div>
   )
+}
+
+NotFoundPage.propTypes = {
+  projects: PropTypes.bool.isRequired
 }
 
 export default NotFoundPage;
