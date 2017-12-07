@@ -8,44 +8,38 @@ import PropTypes from 'prop-types';
 import PageAnimationWrapper from './PageAnimationWrapper';
 import NotFoundPage from './NotFoundPage.js';
 
-class Main extends React.Component {
-  constructor(props) {
-    super(props)
-    this.found = false;
-  }
-  render() {
-    this.found = false;
-    return(
-      <main className={this.props.isHome?"home":""}>
-        <Route exact path="/" children={({ match, ...rest }) => {
-          this.found = this.found || match;
-          return (
-          <PageAnimationWrapper mounted={match} home={true} page="Home">
-            <HomePage setHome={this.props.setHome} unsetHome={this.props.unsetHome} {...rest}/>
-          </PageAnimationWrapper>
-        );}}/>
-        <Route exact path="/about" children={({ match, ...rest }) => {
-          this.found = this.found || match;
-          return (
-          <PageAnimationWrapper mounted={match} home={false} page="About">
-            <AboutPage {...rest}/>
-          </PageAnimationWrapper>
-        );}}/>
-        <Route path="/projects" children={({ match, ...rest }) => {
-          this.found = this.found || match;
-          return (
-          <PageAnimationWrapper mounted={match} home={false} page="Projects">
-            <ProjectsPage {...rest}/>
-          </PageAnimationWrapper>
-        );}}/>
-        <Route children={({ ...rest }) => (
-          <PageAnimationWrapper mounted={!this.found} home={false} page="Error 404 (Not Found!)">
-            <NotFoundPage {...rest}/>
-          </PageAnimationWrapper>
-        )}/>
-      </main>
-    );
-  }
+const Main = (props) => {
+  let found = false;
+  return (
+    <main className={props.isHome?"home":""}>
+      <Route exact path="/" children={({ match, ...rest }) => {
+        found = match;
+        return (
+        <PageAnimationWrapper mounted={match} home={true} page="Home">
+          <HomePage setHome={props.setHome} unsetHome={props.unsetHome} {...rest}/>
+        </PageAnimationWrapper>
+      );}}/>
+      <Route exact path="/about" children={({ match, ...rest }) => {
+        found = found || match;
+        return (
+        <PageAnimationWrapper mounted={match} home={false} page="About">
+          <AboutPage {...rest}/>
+        </PageAnimationWrapper>
+      );}}/>
+      <Route path="/projects" children={({ match, ...rest }) => {
+        found = found || match;
+        return (
+        <PageAnimationWrapper mounted={match} home={false} page="Projects">
+          <ProjectsPage {...rest}/>
+        </PageAnimationWrapper>
+      );}}/>
+      <Route children={({ ...rest }) => (
+        <PageAnimationWrapper mounted={!found} home={false} page="Error 404 (Not Found!)">
+          <NotFoundPage projects={false} {...rest}/>
+        </PageAnimationWrapper>
+      )}/>
+    </main>
+  );
 }
 
 Main.propTypes = {
