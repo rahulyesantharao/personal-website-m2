@@ -22,6 +22,7 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: CONFIG.DIST,
+    publicPath: '/',
     filename: '[name].[chunkhash].js'
   },
   module: {
