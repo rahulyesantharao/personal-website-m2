@@ -10,8 +10,10 @@ import ProjMoveOver from './project-pages/ProjMoveOver';
 import ProjCLHSOrch from './project-pages/ProjCLHSOrch';
 import ProjPolymap from './project-pages/ProjPolymap';
 import ProjPersonalWebsite from './project-pages/ProjPersonalWebsite';
+import NotFoundPage from '../common/NotFoundPage.js';
 
 const ProjectsPage = () => {
+  let found = false;
   return (
     <div>
     <section className="container-fluid" id="projectsHeader">
@@ -29,44 +31,65 @@ const ProjectsPage = () => {
           <h1><span>Projects</span></h1>
         </div>
       </div> */}
-      <Route exact path="/projects" children={({ match, ...rest }) => (
+      <Route exact path="/projects" children={({ match, ...rest }) => {
+        found = match;
+        return (
         <PageAnimationWrapper mounted={match} home={false} page="Projects">
           <ProjectsDisplay {...rest}/>
         </PageAnimationWrapper>
-      )}/>
-      <Route exact path="/projects/zerorobotics" children={({ match, ...rest }) => (
+      );}}/>
+      <Route exact path="/projects/zerorobotics" children={({ match, ...rest }) => {
+        found = found || match;
+        return (
         <PageAnimationWrapper mounted={match} home={false} page="ZeroRobotics | Projects">
           <ProjZR {...rest}/>
         </PageAnimationWrapper>
-      )}/>
-      <Route exact path="/projects/findr" children={({ match, ...rest }) => (
+      );}}/>
+      <Route exact path="/projects/findr" children={({ match, ...rest }) => {
+        found = found || match;
+        return (
         <PageAnimationWrapper mounted={match} home={false} page="FindR | Projects">
           <ProjFindR {...rest}/>
         </PageAnimationWrapper>
-      )}/>
-      <Route exact path="/projects/recyclo" children={({ match, ...rest }) => (
+      );}}/>
+      <Route exact path="/projects/recyclo" children={({ match, ...rest }) => {
+        found = found || match;
+        return (
         <PageAnimationWrapper mounted={match} home={false} page="Recyclo | Projects">
           <ProjRecyclo {...rest}/>
         </PageAnimationWrapper>
-      )}/>
-      <Route exact path="/projects/moveover" children={({ match, ...rest }) => (
+      );}}/>
+      <Route exact path="/projects/moveover" children={({ match, ...rest }) => {
+        found = found || match;
+        return (
         <PageAnimationWrapper mounted={match} home={false} page="MoveOver | Projects">
           <ProjMoveOver {...rest}/>
         </PageAnimationWrapper>
-      )}/>
-      <Route exact path="/projects/clhsorchestra" children={({ match, ...rest }) => (
+      );}}/>
+      <Route exact path="/projects/clhsorchestra" children={({ match, ...rest }) => {
+        found = found || match;
+        return (
         <PageAnimationWrapper mounted={match} home={false} page="CLHS Orchestra | Projects">
           <ProjCLHSOrch {...rest}/>
         </PageAnimationWrapper>
-      )}/>
-      <Route exact path="/projects/polymap" children={({ match, ...rest }) => (
+      );}}/>
+      <Route exact path="/projects/polymap" children={({ match, ...rest }) => {
+        found = found || match;
+        return (
         <PageAnimationWrapper mounted={match} home={false} page="Polymap | Projects">
           <ProjPolymap {...rest}/>
         </PageAnimationWrapper>
-      )}/>
-      <Route exact path="/projects/personalwebsite" children={({ match, ...rest }) => (
+      );}}/>
+      <Route exact path="/projects/personalwebsite" children={({ match, ...rest }) => {
+        found = found || match;
+        return (
         <PageAnimationWrapper mounted={match} home={false} page="Personal Website | Projects">
           <ProjPersonalWebsite {...rest}/>
+        </PageAnimationWrapper>
+      );}}/>
+      <Route children={({ ...rest }) => (
+        <PageAnimationWrapper mounted={!found} home={false} page="Error 404 (Not Found!)">
+          <NotFoundPage projects={true} {...rest}/>
         </PageAnimationWrapper>
       )}/>
     </section>
