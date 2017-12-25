@@ -33,11 +33,12 @@ const Main = (props) => {
           <ProjectsPage {...rest}/>
         </PageAnimationWrapper>
       );}}/>
-      <Route children={({ ...rest }) => (
+      <Route children={({ ...rest }) => {
+        return (
         <PageAnimationWrapper mounted={!found} home={false} page="Error 404 (Not Found!)">
           <NotFoundPage projects={false} {...rest}/>
         </PageAnimationWrapper>
-      )}/>
+      );}}/>
     </main>
   );
 }

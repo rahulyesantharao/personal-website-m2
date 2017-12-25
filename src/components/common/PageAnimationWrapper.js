@@ -3,78 +3,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const timeoutTime = 182;
+// const timeoutTime = 182; // eslint-disable-line no-unused-vars
 
 class PageAnimationWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: props.mounted?true:false,
-      className: "page-0"
+      show: props.mounted
     }
   }
 
   showState() {
-    return "(" + this.state.show + ", " + this.state.className + ")";
+    return "(" + this.state.show + ")";
   }
   setShow() {
-    // console.log(this.props.page + ": " + caller + ">setShow" + this.showState());
     this.setState((prevState) => (
       Object.assign({}, prevState, {show: true})
     ));
-    // document.title = this.props.page + " | Rahul Yesantharao";
   }
   unsetShow() {
-    // console.log(this.props.page + ": " + caller + ">unsetShow" + this.showState());
     this.setState((prevState) => (
       Object.assign({}, prevState, {show: false})
     ));
   }
-  setShowClass() {
-    if(!(this.state.className==="page-1")) {
-      // console.log(this.props.page + ": " + caller + ">setShowClass" + this.showState());
-      this.setState((prevState) => (
-        Object.assign({}, prevState, {className: "page-1"})
-      ))
-    }
-  }
-  unsetShowClass() {
-    if(!(this.state.className==="page-0")) {
-      // console.log(this.props.page + ": " + caller + ">unsetShowClass" + this.showState());
-      this.setState((prevState) => (
-        Object.assign({}, prevState, {className: "page-0"})
-      ));
-    }
-  }
 
   componentDidMount() {
-    // console.log(this.props.page + ": componentDidMount");
     if(this.props.mounted) { // show the element
       this.setShow();
-      this.setShowClass()
-      // setTimeout(() => this.setShowClass(), timeoutTime);
-    } else {
-      // this.unsetShowClass();
     }
   }
   componentWillReceiveProps(newProps) {
     if(newProps.mounted!=this.props.mounted) {
-      // console.log(newProps.page + ": componentWillReceiveProps: mounted: " + newProps.mounted);
       if(newProps.mounted) { // show the element
         if(!this.state.show) {
           document.title = this.props.home?("Rahul Yesantharao"):(this.props.page + " | Rahul Yesantharao");
-          setTimeout(() => this.setShow(), timeoutTime); // ** DON'T RENDER UNTIL AFTER THE PREVIOUS PAGE HAS UNLOADED ENTIRELY, gets rid of the need for absolute positioning
+          this.setShow();
         }
-        setTimeout(() => this.setShowClass(), timeoutTime);
       } else {
-        this.unsetShowClass();
+        this.unsetShow();
       }
-    }
-  }
-  transitionEnd() {
-    // console.log(this.props.page + ": transitionEnd: mounted: " + this.props.mounted);
-    if(!this.props.mounted) {
-      this.unsetShow();
     }
   }
 
@@ -85,8 +52,9 @@ class PageAnimationWrapper extends React.Component {
         pageStyle = {height: '100%', paddingTop: '0'};
       }
     }
+    let className = (this.state.show)?"page-1":"page-0";
     return (
-      <div className={"page-wrapper " + this.state.className} onTransitionEnd={()=>this.transitionEnd()} style={pageStyle}>
+      <div className={"page-wrapper " + className} style={pageStyle}>
         {this.state.show && this.props.children}
       </div>
     );
