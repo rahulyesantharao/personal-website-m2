@@ -17,6 +17,8 @@ class PageAnimationWrapper extends React.Component {
     return "(" + this.state.show + ")";
   }
   setShow() {
+    // document.title = this.props.home?("Rahul Yesantharao"):(this.props.page + " | Rahul Yesantharao");
+    // console.log(this.props.page); // eslint-disable-line no-console
     this.setState((prevState) => (
       Object.assign({}, prevState, {show: true})
     ));
@@ -36,7 +38,7 @@ class PageAnimationWrapper extends React.Component {
     if(newProps.mounted!=this.props.mounted) {
       if(newProps.mounted) { // show the element
         if(!this.state.show) {
-          document.title = this.props.home?("Rahul Yesantharao"):(this.props.page + " | Rahul Yesantharao");
+          // document.title = this.props.home?("Rahul Yesantharao"):(this.props.page + " | Rahul Yesantharao");
           this.setShow();
         }
       } else {
@@ -65,7 +67,7 @@ class PageAnimationWrapper extends React.Component {
 PageAnimationWrapper.propTypes = {
   mounted: PropTypes.bool.isRequired,
   children: PropTypes.element.isRequired,
-  page: PropTypes.string.isRequired,
+  // page: PropTypes.string.isRequired,
   home: PropTypes.bool.isRequired
 }
 

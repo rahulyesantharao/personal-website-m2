@@ -13,29 +13,39 @@ const Main = (props) => {
   return (
     <main className={props.isHome?"home":""}>
       <Route exact path="/" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={true} page="Home">
+        <PageAnimationWrapper mounted={match?true:false} home={true}>
           <HomePage setHome={props.setHome} unsetHome={props.unsetHome} {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/about" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "About | Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="About">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <AboutPage {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route path="/projects" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "Projects | Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjectsPage {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route children={({ ...rest }) => {
+        if(!found) document.title = "Error 404 | Rahul Yesantharao";
         return (
-        <PageAnimationWrapper mounted={!found} home={false} page="Error 404 (Not Found!)">
+        <PageAnimationWrapper mounted={!found} home={false}>
           <NotFoundPage projects={false} {...rest}/>
         </PageAnimationWrapper>
       );}}/>

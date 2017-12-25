@@ -34,64 +34,87 @@ const ProjectsPage = () => {
       <Route exact path="/projects" children={({ match, ...rest }) => {
         if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjectsDisplay {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/zerorobotics" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "ZeroRobotics | Projects | Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="ZeroRobotics | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjZR {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/findr" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "FindR | Projects | Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="FindR | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjFindR {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/recyclo" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "Recyclo | Projects | Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="Recyclo | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjRecyclo {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/moveover" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "MoveOver | Projects | Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="MoveOver | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjMoveOver {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/clhsorchestra" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "CLHS Orchestra | Projects | Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="CLHS Orchestra | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjCLHSOrch {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/polymap" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "Polymap | Projects | Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="Polymap | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjPolymap {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/personalwebsite" children={({ match, ...rest }) => {
-        if(match) found = true;
+        if(match) {
+          found = true;
+          document.title = "Personal Website | Projects | Rahul Yesantharao";
+        }
         return (
-        <PageAnimationWrapper mounted={match?true:false} home={false} page="Personal Website | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjPersonalWebsite {...rest}/>
         </PageAnimationWrapper>
       );}}/>
-      <Route children={({ ...rest }) => (
-        <PageAnimationWrapper mounted={!found} home={false} page="Error 404 (Not Found!)">
+      <Route children={({ ...rest }) => {
+        if(!found) document.title = "Error 404 | Projects | Rahul Yesantharao";
+        return (
+        <PageAnimationWrapper mounted={!found} home={false}>
           <NotFoundPage projects={true} {...rest}/>
         </PageAnimationWrapper>
-      )}/>
+      );}}/>
     </section>
     </div>
   )
