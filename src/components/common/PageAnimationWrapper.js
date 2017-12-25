@@ -95,7 +95,7 @@ class PageAnimationWrapper extends React.Component {
 }
 
 PageAnimationWrapper.propTypes = {
-  mounted: PropTypes.object.isRequired,
+  mounted: PropTypes.bool.isRequired,
   children: PropTypes.element.isRequired,
   page: PropTypes.string.isRequired,
   home: PropTypes.bool.isRequired

@@ -13,23 +13,23 @@ const Main = (props) => {
   return (
     <main className={props.isHome?"home":""}>
       <Route exact path="/" children={({ match, ...rest }) => {
-        found = match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={true} page="Home">
+        <PageAnimationWrapper mounted={match?true:false} home={true} page="Home">
           <HomePage setHome={props.setHome} unsetHome={props.unsetHome} {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/about" children={({ match, ...rest }) => {
-        found = found || match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="About">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="About">
           <AboutPage {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route path="/projects" children={({ match, ...rest }) => {
-        found = found || match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="Projects">
           <ProjectsPage {...rest}/>
         </PageAnimationWrapper>
       );}}/>

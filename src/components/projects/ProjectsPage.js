@@ -32,58 +32,58 @@ const ProjectsPage = () => {
         </div>
       </div> */}
       <Route exact path="/projects" children={({ match, ...rest }) => {
-        found = match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="Projects">
           <ProjectsDisplay {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/zerorobotics" children={({ match, ...rest }) => {
-        found = found || match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="ZeroRobotics | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="ZeroRobotics | Projects">
           <ProjZR {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/findr" children={({ match, ...rest }) => {
-        found = found || match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="FindR | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="FindR | Projects">
           <ProjFindR {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/recyclo" children={({ match, ...rest }) => {
-        found = found || match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="Recyclo | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="Recyclo | Projects">
           <ProjRecyclo {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/moveover" children={({ match, ...rest }) => {
-        found = found || match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="MoveOver | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="MoveOver | Projects">
           <ProjMoveOver {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/clhsorchestra" children={({ match, ...rest }) => {
-        found = found || match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="CLHS Orchestra | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="CLHS Orchestra | Projects">
           <ProjCLHSOrch {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/polymap" children={({ match, ...rest }) => {
-        found = found || match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="Polymap | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="Polymap | Projects">
           <ProjPolymap {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/projects/personalwebsite" children={({ match, ...rest }) => {
-        found = found || match;
+        if(match) found = true;
         return (
-        <PageAnimationWrapper mounted={match} home={false} page="Personal Website | Projects">
+        <PageAnimationWrapper mounted={match?true:false} home={false} page="Personal Website | Projects">
           <ProjPersonalWebsite {...rest}/>
         </PageAnimationWrapper>
       );}}/>
