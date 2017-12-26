@@ -4,6 +4,7 @@ import {Route/*, Switch*/} from 'react-router-dom';
 import HomePage from '../home/HomePage';
 import AboutPage from '../about/AboutPage';
 import ProjectsPage from '../projects/ProjectsPage';
+import BlogPage from '../blog/BlogPage';
 import PropTypes from 'prop-types';
 import PageAnimationWrapper from './PageAnimationWrapper';
 import NotFoundPage from './NotFoundPage.js';
@@ -40,6 +41,16 @@ const Main = (props) => {
         return (
         <PageAnimationWrapper mounted={match?true:false} home={false}>
           <ProjectsPage {...rest}/>
+        </PageAnimationWrapper>
+      );}}/>
+      <Route path="/blog" children={({ match, ...rest }) => {
+        if(match) {
+          found = true;
+          document.title = "Blog | Rahul Yesantharao";
+        }
+        return (
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
+          <BlogPage {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route children={({ ...rest }) => {
