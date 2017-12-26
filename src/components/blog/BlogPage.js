@@ -79,7 +79,7 @@ class BlogPage extends React.Component {
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-12-mobile is-8-tablet is-8-desktop">
-                <h1><span>/usr/etc/*</span></h1>
+                <h1><span>/usr/etc/rahul/*</span></h1>
               </div>
             </div>
           </div>
