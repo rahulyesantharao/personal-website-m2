@@ -1,6 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+// @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
-
+// @import url('https://fonts.googleapis.com/css?family=Montserrat');
 // Site Colors
 $color-primary: blue;
 $color-accent: #2b669b;
@@ -19,7 +20,8 @@ $color-nav-link: white; //black;
 // $color-nav-link-pressed: $color-nav-link;
 
 // Fonts
-$font-family-primary: Lato, sans-serif;
+$font-family-primary: 'Zilla Slab', sans-serif; //Lato, sans-serif;
+$font-family-secondary: 'Zilla Slab', sans-serif;
 $font-family-headings: 'Zilla Slab', monospace;
 
 $font-weight-light: 300;
@@ -29,11 +31,11 @@ $font-weight-bold: 700;
 $line-height-primary: 1.5;
 
 $font-size-logo: 1.4rem;
-$font-size-h: 3rem, 1.5rem, 1.2rem;
+$font-size-h: 3rem, 2rem, 1.2rem;
 
 // Transitions
 $transition-time: 0.25s;
-$page-transition-time: 0.18s;
+$page-transition-time: 0.25s;
 $navlink-transition-time: 0.25s;
 
 // Responsive Breakpoints

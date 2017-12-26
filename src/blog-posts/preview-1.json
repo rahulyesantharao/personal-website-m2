@@ -1,0 +1,36 @@
+{
+  "hasOlder": false,
+  "hasNewer": true,
+  "posts": [
+    {
+      "id": 1,
+      "date": "January 1st, 2000",
+      "title": "Post 1",
+      "content": "Lorem ipsum dolor sit amet, sit ei tractatos adolescens, vim ei assentior ullamcorper, te verear consulatu est. Vis numquam graecis no, eam omnes utroque in. Quo an dicam temporibus reprehendunt, labore splendide est ad."
+    },
+    {
+      "id": 2,
+      "date": "January 2nd, 2000",
+      "title": "Post 2",
+      "content": "Lorem ipsum dolor sit amet, sit ei tractatos adolescens, vim ei assentior ullamcorper, te verear consulatu est. Vis numquam graecis no, eam omnes utroque in. Quo an dicam temporibus reprehendunt, labore splendide est ad."
+    },
+    {
+      "id": 3,
+      "date": "January 3rd, 2000",
+      "title": "Post 3",
+      "content": "Lorem ipsum dolor sit amet, sit ei tractatos adolescens, vim ei assentior ullamcorper, te verear consulatu est. Vis numquam graecis no, eam omnes utroque in. Quo an dicam temporibus reprehendunt, labore splendide est ad."
+    },
+    {
+      "id": 4,
+      "date": "January 4th, 2000",
+      "title": "Post 4",
+      "content": "Lorem ipsum dolor sit amet, sit ei tractatos adolescens, vim ei assentior ullamcorper, te verear consulatu est. Vis numquam graecis no, eam omnes utroque in. Quo an dicam temporibus reprehendunt, labore splendide est ad."
+    },
+    {
+      "id": 5,
+      "date": "January 5th, 2000",
+      "title": "Post 5",
+      "content": "Lorem ipsum dolor sit amet, sit ei tractatos adolescens, vim ei assentior ullamcorper, te verear consulatu est. Vis numquam graecis no, eam omnes utroque in. Quo an dicam temporibus reprehendunt, labore splendide est ad."
+    }
+  ]
+}
