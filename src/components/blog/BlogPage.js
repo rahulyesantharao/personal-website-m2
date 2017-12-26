@@ -9,7 +9,7 @@ class BlogPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      curPage: 3,
+      curPage: 1,
       hasOlder: false,
       hasNewer: false,
       posts: [],

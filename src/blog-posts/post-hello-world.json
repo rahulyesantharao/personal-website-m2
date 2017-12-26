@@ -1,0 +1,8 @@
+{
+  "post": {
+    "id": "hello-world",
+    "date": "December 26th, 2017",
+    "title": "Hello World!",
+    "content": "<p>Hello! This is the start of my new blog, notes, where I will semi-regularly post tech-related content. To start out, look forward to a basic primer on ReactJS!</p>"
+  }
+}
