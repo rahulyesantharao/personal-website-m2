@@ -116,10 +116,22 @@ h3 {
 .is-flex {
   display: flex !important;
   flex-wrap: wrap;
+  @include mobile {
+    display: block !important;
+    p {
+      text-align: center;
+    }
+  }
 }
-
+.top-pad-mobile {
+  @include mobile {
+    padding-top: 1.5rem !important;
+  }
+}
 .is-right {
-  margin-left: auto;
+  @include tablet {
+    margin-left: auto;
+  }
 }
 
 .is-justified {
