@@ -21,10 +21,10 @@ class BlogPage extends React.Component {
     const url = `/blog-posts/post-${postNum}.json`;
     return fetch(url)
       .then(response => {
-        console.log("Fetched", response); // eslint-disable-line no-console
+        // console.log("Fetched", response); // eslint-disable-line no-console
         return response.json();
-      }).catch(ex => {
-        console.log('fetch post exception :(', ex) // eslint-disable-line no-console
+      }).catch(ex => { // eslint-disable-line no-unused-vars
+        // console.log('fetch post exception :(', ex) // eslint-disable-line no-console
         return {post: {title: "Error 404", content:"<p>Sorry! That post does not seem to exist.</p>", id:postNum}}
       });
   }
@@ -39,15 +39,15 @@ class BlogPage extends React.Component {
     const url = `/blog-posts/preview-${page}.json`;
     return fetch(url)
       .then(response => {
-        console.log("Fetched", response); // eslint-disable-line no-console
+        // console.log("Fetched", response); // eslint-disable-line no-console
         return response.json();
-      }).catch(ex => {
-        console.log('fetch exception :(', ex) // eslint-disable-line no-console
+      }).catch(ex => { // eslint-disable-line no-unused-vars
+        // console.log('fetch exception :(', ex) // eslint-disable-line no-console
       });
   }
   getCurPage() {
     this.getPage(this.state.curPage).then(data => {
-      console.log("Got CurPage!", data); // eslint-disable-line no-console
+      // console.log("Got CurPage!", data); // eslint-disable-line no-console
       this.setState(prevState => (
         Object.assign({}, prevState, {hasOlder:data.hasOlder, hasNewer:data.hasNewer, posts:data.posts.reverse()})
       ))
@@ -58,17 +58,15 @@ class BlogPage extends React.Component {
     this.setState(prevState => (
       Object.assign({}, prevState, {curPage:prevState.curPage+1})
     ), this.getCurPage);
-    // this.getCurPage();
   }
   getOlder() {
     this.setState(prevState => (
       Object.assign({}, prevState, {curPage:prevState.curPage-1})
     ), this.getCurPage);
-    // this.getCurPage();
   }
 
   componentDidMount() {
-    console.log("Blog Mounted!"); // eslint-disable-line no-console
+    // console.log("Blog Mounted!"); // eslint-disable-line no-console
     this.getCurPage();
   }
 
@@ -81,7 +79,7 @@ class BlogPage extends React.Component {
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-12-mobile is-8-tablet is-8-desktop">
-                <h1><span>Blog</span></h1>
+                <h1><span>/usr/etc/*</span></h1>
               </div>
             </div>
           </div>

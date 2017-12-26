@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BlogPostPreview from './BlogPostPreview';
 
-
-
 const BlogPostList = (props) => {
-  console.log("Posts!", props.posts); // eslint-disable-line no-console
+  // console.log("Posts!", props.posts); // eslint-disable-line no-console
   const handleOlder = (e) => {
     e.preventDefault();
     props.getOlder();
@@ -17,7 +15,7 @@ const BlogPostList = (props) => {
   return (
       <div className="columns is-centered">
         {props.posts.map((el) =>{
-          console.log('Post!'); // eslint-disable-line no-console
+          // console.log('Post!'); // eslint-disable-line no-console
           return (<BlogPostPreview title={el.title} content={el.content} date={el.date} id={el.id} key={el.id}/>);
         })}
         <div className="column is-12-mobile is-8-tablet is-8-desktop is-flex text">

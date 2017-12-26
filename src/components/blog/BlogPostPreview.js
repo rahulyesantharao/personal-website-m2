@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 const BlogPostPreview = (props) => {
-  console.log("PReview:", props); // eslint-disable-line no-console
+  // console.log("PReview:", props); // eslint-disable-line no-console
   return (
     <div className="column is-12-mobile is-8-tablet is-8-desktop blog-post-preview">
       <div style={{marginBottom:"0.75rem"}}>
