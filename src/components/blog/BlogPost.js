@@ -13,6 +13,7 @@ const BlogPost = (props) => {
       content: "<p>Post Loading...</p>"
     }
   }
+  document.title = props.post.title + " | Blog | Rahul Yesantharao";
   return (
     <div>
       <div className="columns is-centered">
