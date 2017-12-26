@@ -90,7 +90,7 @@ class BlogPage extends React.Component {
             document.title = "Blog | Rahul Yesantharao";
             found = true;
           }
-          console.log("New State!", this.state); // eslint-disable-line no-console
+          // console.log("New State!", this.state); // eslint-disable-line no-console
           return (
           <PageAnimationWrapper mounted={match?true:false} home={false}>
             <BlogPostList {...rest} posts={this.state.posts} getNewer={this.getNewer.bind(this)} getOlder={this.getOlder.bind(this)} hasNewer={this.state.hasNewer} hasOlder={this.state.hasOlder}/>
