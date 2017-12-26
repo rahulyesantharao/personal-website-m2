@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProjectFooter from '../projects/ProjectFooter';
-
+import BlogPostFooter from '../blog/BlogPostFooter';
 const NotFoundPage = (props) => {
   let curURL = window.location.pathname;
-  if(props.projects) {
+  if(props.page==='projects') {
     return (
       <div>
         <div className="columns is-centered">
@@ -16,6 +16,21 @@ const NotFoundPage = (props) => {
           </div>
         </div>
         <ProjectFooter type="none" link=""/>
+      </div>
+    )
+  }
+  if(props.page==='blog') {
+    return (
+      <div>
+        <div className="columns is-centered">
+          <div className="column is-12-mobile is-8-tablet is-8-desktop">
+            <h2><span>Error 404</span></h2>
+          </div>
+          <div className="column is-12-mobile is-8-tablet is-8-desktop">
+            <p>Sorry! That page does not seem to exist.</p>
+          </div>
+        </div>
+        <BlogPostFooter/>
       </div>
     )
   }
@@ -46,7 +61,7 @@ const NotFoundPage = (props) => {
 }
 
 NotFoundPage.propTypes = {
-  projects: PropTypes.bool.isRequired
+  page: PropTypes.string.isRequired
 }
 
 export default NotFoundPage;

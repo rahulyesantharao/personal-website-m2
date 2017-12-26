@@ -57,7 +57,7 @@ const Main = (props) => {
         if(!found) document.title = "Error 404 | Rahul Yesantharao";
         return (
         <PageAnimationWrapper mounted={!found} home={false}>
-          <NotFoundPage projects={false} {...rest}/>
+          <NotFoundPage page="regular" {...rest}/>
         </PageAnimationWrapper>
       );}}/>
     </main>

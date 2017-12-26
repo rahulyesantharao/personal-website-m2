@@ -112,7 +112,7 @@ const ProjectsPage = () => {
         if(!found) document.title = "Error 404 | Projects | Rahul Yesantharao";
         return (
         <PageAnimationWrapper mounted={!found} home={false}>
-          <NotFoundPage projects={true} {...rest}/>
+          <NotFoundPage page="projects" {...rest}/>
         </PageAnimationWrapper>
       );}}/>
     </section>
