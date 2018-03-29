@@ -7,6 +7,12 @@
       "date": "December 26th, 2017",
       "title": "Hello, World!",
       "content": "Hello! This is the start of my new blog, /usr/etc/rahul/*. I've been meaning to make"
+    },
+    {
+      "id": "mit-splash-2017",
+      "date": "February 21st, 2018",
+      "title": "MIT Splash 2017!",
+      "content": "MIT Splash is a weekend program where MIT students teach classes on literally any topic"
     }
   ]
 }
