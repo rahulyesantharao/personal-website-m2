@@ -11,20 +11,13 @@ import ProjCLHSOrch from './project-pages/ProjCLHSOrch';
 import ProjPolymap from './project-pages/ProjPolymap';
 import ProjPersonalWebsite from './project-pages/ProjPersonalWebsite';
 import NotFoundPage from '../common/NotFoundPage.js';
+import PageTitle from '../common/PageTitle';
 
 const ProjectsPage = () => {
   let found = false;
   return (
     <div>
-    <section className="container-fluid" id="projectsHeader">
-      <div className="container">
-        <div className="columns is-centered">
-          <div className="column is-12-mobile is-8-tablet is-8-desktop">
-            <h1><span>Projects</span></h1>
-          </div>
-        </div>
-      </div>
-    </section>
+    <PageTitle titleId="projectsHeader" titleText="Projects"/>
     <section className="container top-pad">
       {/* <div className="columns is-centered">
         <div className="column is-12-mobile is-8-tablet is-8-desktop">

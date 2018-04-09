@@ -1,17 +1,10 @@
 import React from 'react';
+import PageTitle from '../common/PageTitle';
 
 const AboutPage = () => {
   return (
     <div>
-    <section className="container-fluid" id="aboutHeader">
-      <div className="container">
-        <div className="columns is-centered">
-          <div className="column is-12-mobile is-8-tablet is-8-desktop">
-            <h1><span>About Me</span></h1>
-          </div>
-        </div>
-      </div>
-    </section>
+    <PageTitle titleId="aboutHeader" titleText="About Me"/>
     <section className="container top-pad">
       {/* <div className="columns is-centered">
         <h1 className="column is-12-mobile is-8-tablet is-8-desktop"><span>About Me</span></h1>
