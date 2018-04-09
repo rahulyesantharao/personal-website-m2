@@ -20,7 +20,7 @@ const Main = (props) => {
         }
         return (
         <PageAnimationWrapper mounted={match?true:false} home={true}>
-          <HomePage setHome={props.setHome} unsetHome={props.unsetHome} {...rest}/>
+          <HomePage {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route exact path="/about" children={({ match, ...rest }) => {
@@ -65,8 +65,6 @@ const Main = (props) => {
 }
 
 Main.propTypes = {
-  setHome: PropTypes.func.isRequired,
-  unsetHome: PropTypes.func.isRequired,
   isHome: PropTypes.bool.isRequired
 };
 
