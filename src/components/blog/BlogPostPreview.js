@@ -9,8 +9,8 @@ const BlogPostPreview = (props) => {
         <Link to={`/blog/posts/${props.id}`}><h2><span>{props.title}</span></h2></Link>
       </div>
       <div style={{paddingBottom:"0.75rem"}}>
-        <p>
-          {props.content + "..."}
+        <p dangerouslySetInnerHTML={{__html: props.content}}>
+          {/* {props.content + "..."} */}
         </p>
       </div>
       <div style={{fontSize:"1rem", color:"#2b669b"}}>
