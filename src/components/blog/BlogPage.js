@@ -106,7 +106,7 @@ class BlogPage extends React.Component {
 
           {/* ROUTE to page by number */}
           <Route exact path="/blog/pages/:num" children={({ match, ...rest }) => { // go to a page
-            let pageNum = 1;
+            let pageNum = -1;
             if(match) {
               document.title = "Blog | Rahul Yesantharao";
               found = true;
