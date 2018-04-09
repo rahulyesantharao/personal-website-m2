@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {home:false, menu:false};
+    this.state = {menu:false};
   }
 
   toggleMenu() {
