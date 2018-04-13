@@ -11,7 +11,7 @@
     "start": "npm-run-all --parallel lint:watch dev:watch",
     "clean:dist": "rimraf ./dist && mkdir dist",
     "copy-favicons": "copyfiles -u 2 src/favicons/* dist",
-    "copy-blog": "copyfiles -u 2 src/blog-posts/* dist/blog-posts",
+    "copy-blog": "copyfiles -u 2 src/blog-posts/* src/blog-posts/posts/* src/blog-posts/pages/* dist/blog-posts",
     "prebuild": "npm-run-all clean:dist lint copy-favicons copy-blog",
     "build": "node ./tools/build.js",
     "postbuild": "node ./tools/distServer.js"
