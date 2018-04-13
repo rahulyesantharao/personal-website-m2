@@ -13,7 +13,7 @@ const BlogPostList = (props) => {
           let date = new Date(el.post_date);
           let viewDate = MONTH_NAMES[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
           // console.log('Post!'); // eslint-disable-line no-console
-          return (<BlogPostPreview title={el.post_title} content={el.post_html} date={viewDate} id={el.post_id} key={el.post_id}/>);
+          return (<BlogPostPreview title={el.post_title} content={el.post_html} date={viewDate} id={el.post_id} key={el.post_id} author={el.author.name}/>);
         })}
         <div className="column is-12-mobile is-8-tablet is-8-desktop is-flex text">
           {props.hasNewer && <p><Link to={`/blog/pages/${props.pageNum-1}`}>&#8592; Newer Posts</Link></p>}

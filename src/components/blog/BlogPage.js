@@ -8,8 +8,8 @@ import NotFoundPage from "../common/NotFoundPage";
 import BlogPost from './BlogPost';
 import BlogPostList from './BlogPostList';
 
-const PAGE_URL = '/blog-posts/pages.json';//'https://api.rahulyesantharao.com/blog-api/pages'
-const POST_URL = '/blog-posts';//'https://api.rahulyesantharao.com/blog-api/posts'
+const PAGE_URL = '/blog-posts/pages';//'https://api.rahulyesantharao.com/blog-api/pages'
+const POST_URL = '/blog-posts/posts';//'https://api.rahulyesantharao.com/blog-api/posts'
 
 const POST_404 = {post_title: "Error 404", post_html:"<p>Sorry! That post does not seem to exist.</p>", post_id:"ENTER"}
 
@@ -40,12 +40,15 @@ class BlogPage extends React.Component {
     });
   }
   getPage(pageNum) {
-    const url = `/blog-posts/page-${pageNum}.json`;
+    const url = PAGE_URL + `/${pageNum}.json`;
     return fetch(url)
     .then(response => {
+      // console.log(response);
+      // console.log(response.json());
       return response.json();
     })
     .then(data => {
+      console.log("GOT TO 2");
       this.setState(prevState => {
         // compile the posts
         let postsToAdd = {};
@@ -63,7 +66,7 @@ class BlogPage extends React.Component {
   }
   setup() {
     // Posts + Pages Initial Setup
-    return fetch(PAGE_URL)
+    return fetch(PAGE_URL + '.json')
       .then(response => {
         return response.json();
       })
@@ -128,7 +131,7 @@ class BlogPage extends React.Component {
                   let post = this.state.pages[pageNum-1][postNum];
                   let next = this.state.posts[post];
                   if(Object.keys(next).length === 0) {
-                    next = {post_title: "Loading...", post_id: post}
+                    next = {post_title: "Loading...", post_id: post, author: {}}
                     loaded = false;
                   }
                   pageArr.push(next);
