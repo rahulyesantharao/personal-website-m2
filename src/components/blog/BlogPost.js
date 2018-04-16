@@ -4,15 +4,19 @@ import PropTypes from 'prop-types';
 import BlogPostFooter from './BlogPostFooter';
 
 const BlogPost = (props) => {
+  console.log("RENDER BLOGPOST"); // eslint-disable-line no-console
   let curPost = props.post;
   if(!props.post.hasOwnProperty('post_id') || props.post.post_id.toString() !== props.postId) {
     props.getPost(props.postId);
     curPost = {
       post_title: "Loading...",
-      post_html: "<p>Post Loading...</p>"
+      post_html: "<p>Post Loading...</p>",
+      author: {}
     }
   }
-  document.title = props.post.post_title + " | Blog | Rahul Yesantharao";
+  let pageNum = 1;
+  if(curPost.hasOwnProperty('pageNum')) pageNum = curPost.pageNum;
+  document.title = curPost.post_title + " | Blog | Rahul Yesantharao";
   return (
     <div>
       <div className="columns is-centered">
@@ -21,7 +25,7 @@ const BlogPost = (props) => {
           <h3 style={{fontSize:"1rem", color:"#2b669b"}}>{curPost.post_date}</h3>
           <div dangerouslySetInnerHTML={{__html: curPost.post_html}} className="blog-post text"/>
         </div>
-        <div className="column is-12-mobile is-8-tablet is-8-desktop is-flex text">
+        {!curPost.hasOwnProperty("error") && <div className="column is-12-mobile is-8-tablet is-8-desktop is-flex text">
           <p className="top-pad-mobile"><b>{curPost.author.name}</b><br/>
           <span style={{fontSize:"1rem"}}>{curPost.author.description}<br/>
           <i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;{curPost.author.location}</span></p>
@@ -30,9 +34,9 @@ const BlogPost = (props) => {
           <span style={{fontSize:"1rem"}}>
           <a target="_blank" rel="noopener" href="https://twitter.com/share?ref_src=twsrc%5Etfw" className="twitter-share-button" data-show-count="false"><i className="fa fa-twitter" aria-hidden="true"></i></a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
           </span></p>
-        </div>
+        </div>}
       </div>
-      <BlogPostFooter/>
+      <BlogPostFooter page={pageNum}/>
     </div>
   );
 }

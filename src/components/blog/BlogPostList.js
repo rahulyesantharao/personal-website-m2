@@ -6,7 +6,7 @@ import BlogPostPreview from './BlogPostPreview';
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const BlogPostList = (props) => {
-  console.log("BlogPostList Called!", props.page); // eslint-disable-line no-console
+  console.log("RENDER BLOGPOSTLIST", props.page); // eslint-disable-line no-console
   return (
       <div className="columns is-centered">
         {props.page.map((el) =>{
