@@ -17,12 +17,14 @@ const BlogPost = (props) => {
   let pageNum = 1;
   if(curPost.hasOwnProperty('pageNum')) pageNum = curPost.pageNum;
   document.title = curPost.post_title + " | Blog | Rahul Yesantharao";
+  let postDate = curPost.post_date;
+  if(curPost.hasOwnProperty('post_update')) postDate += (" | Updated: " + curPost.post_update);
   return (
     <div>
       <div className="columns is-centered">
         <div className="column is-12-mobile is-8-tablet is-8-desktop">
           <h2 style={{marginTop:"0.6rem", fontSize:"4rem"}}><span>{curPost.post_title}</span></h2>
-          <h3 style={{fontSize:"1rem", color:"#2b669b"}}>{curPost.post_date}</h3>
+          <h3 style={{fontSize:"1rem", color:"#2b669b"}}>{postDate}</h3>
           <div dangerouslySetInnerHTML={{__html: curPost.post_html}} className="blog-post text"/>
         </div>
         {!curPost.hasOwnProperty("error") && <div className="column is-12-mobile is-8-tablet is-8-desktop is-flex text">
