@@ -8,8 +8,8 @@ import NotFoundPage from "../common/NotFoundPage";
 import BlogPost from './BlogPost';
 import BlogPostList from './BlogPostList';
 
-const PAGE_URL = '/blog-posts/pages';//'https://api.rahulyesantharao.com/blog-api/pages'
-const POST_URL = '/blog-posts/posts';//'https://api.rahulyesantharao.com/blog-api/posts'
+const PAGE_URL = 'https://api.rahulyesantharao.com/blog-api/pages'
+const POST_URL = 'https://api.rahulyesantharao.com/blog-api/posts'
 
 const POST_404 = {post_title: "Error 404", post_html:"<p>Sorry! That post does not seem to exist.</p>", author:{}, post_id:"ENTER"}
 
@@ -36,7 +36,7 @@ class BlogPage extends React.Component {
     return loaded;
   }
   getPost(postId) {
-    const url = POST_URL + `/${postId}.json`;
+    const url = POST_URL + `/${postId}`;
     console.log(`getPost(${postId}): ${url}`);
     return fetch(url)
     .then(response => {
@@ -56,7 +56,7 @@ class BlogPage extends React.Component {
     });
   }
   getPage(pageNum) {
-    const url = PAGE_URL + `/${pageNum}.json`;
+    const url = PAGE_URL + `/${pageNum}`;
     return fetch(url)
     .then(response => {
       // console.log(response);
@@ -82,7 +82,7 @@ class BlogPage extends React.Component {
   }
   setup() {
     // Posts + Pages Initial Setup
-    return fetch(PAGE_URL + '.json')
+    return fetch(PAGE_URL)
       .then(response => {
         return response.json();
       })
