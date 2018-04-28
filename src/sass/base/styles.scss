@@ -62,6 +62,19 @@ ul {
     }
   }
 }
+ol {
+  li {
+    counter-increment: step-counter;
+    display: flex;
+    &:before {
+      padding-right: 0.5rem;
+      flex-grow: 0;
+      font-weight: $font-weight-bold;
+      font-family: $font-family-headings;
+      content: counter(step-counter);
+    }
+  }
+}
 
 // Basic heading styles
 @for $index from 1 through 3 {
