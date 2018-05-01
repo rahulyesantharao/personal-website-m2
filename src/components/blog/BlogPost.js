@@ -9,9 +9,14 @@ class BlogPost extends React.Component {
     super(props);
   }
   componentDidMount() {
-    console.log("Going to Highlight!"); // eslint-disable-line no-console
+    console.log("Going to Highlight Mount!"); // eslint-disable-line no-console
     Prism.highlightAll();
-    console.log("Highlighted!"); // eslint-disable-line no-console
+    console.log("Highlighted Mount!"); // eslint-disable-line no-console
+  }
+  componentDidUpdate() {
+    console.log("Going to Highlight Update!"); // eslint-disable-line no-console
+    Prism.highlightAll();
+    console.log("Highlighted! Update"); // eslint-disable-line no-console
   }
   render() {
     console.log("RENDER BLOGPOST"); // eslint-disable-line no-console
