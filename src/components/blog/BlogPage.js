@@ -121,7 +121,7 @@ class BlogPage extends React.Component {
     let unmounted = <PageAnimationWrapper mounted={false} home={false}/>;
     return(
       <div>
-        <PageTitle titleId="projectsHeader" titleText="/usr/etc/rahul/*"/>
+        <PageTitle titleId="blogHeader" titleText="/usr/etc/rahul/*"/>
         <section className="container top-pad">
           {/* ROUTE to page 1 */}
           {/* <Redirect exact to="/blog/pages/1" from="/blog"/> */}
