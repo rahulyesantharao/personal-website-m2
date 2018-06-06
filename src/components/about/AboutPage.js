@@ -24,6 +24,9 @@ const AboutPage = () => {
               I am a freshman at the Massachusetts Institute of Technology, studying Course 6-2 (Electrical Engineering and Computer Science). Check out my <a href="#courseworkHeader">coursework</a> below! In my free time, I direct DevOps for <a href="https://hackmit.org/" target="_blank" rel="noopener noreferrer">HackMIT</a> and help run the <a href="http://ieeeacm.mit.edu/" target="_blank" rel="noopener noreferrer">MIT IEEE/ACM</a> student chapter.
             </p>
             <p>
+              This summer, I am working as a Software Engineering Intern on the Infrastructure team at <a href="https://www.quora.com/" target="_blank" rel="noopener noreferrer">Quora</a>!
+            </p>
+            <p>
               I was born and raised in Houston, Texas, just a couple minutes away from the Johnson Space Center.
               I graduated from Clear Lake High School as Salutatorian of the Class of 2017
               (see my speech <a href="https://vimeo.com/220680421#t=1696s" target="_blank" rel="noopener noreferrer">here!</a>).
