@@ -9,7 +9,7 @@
   "plugins": [
     "transform-object-rest-spread",
     ["prismjs", {
-      "languages": ["javascript", "bash"],
+      "languages": ["javascript", "css", "clike", "markup", "bash"],
       "theme": "okaidia",
       "css": true
     }]
