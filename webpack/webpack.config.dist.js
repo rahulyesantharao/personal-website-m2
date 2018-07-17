@@ -36,13 +36,13 @@ module.exports = {
           }
         ]
       },
-      // {
-      //   test: /\.css$/, // matches all .css files
-      //   use: ExtractTextPlugin.extract({
-      //     fallback: 'style-loader',
-      //     use: 'css-loader'
-      //   })
-      // },
+      {
+        test: /\.css$/, // matches all .css files
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
+      },
       {
         test: /\.scss$/, // matches all .scss files
         use: ExtractTextPlugin.extract({
