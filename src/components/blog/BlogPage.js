@@ -1,118 +1,230 @@
 /* eslint-disable react/no-children-prop */
+/* eslint-disable no-console */
 import React from 'react';
-import {Route} from 'react-router-dom';
+import {Route, } from 'react-router-dom';
 import PageAnimationWrapper from '../common/PageAnimationWrapper';
-import BlogPostList from './BlogPostList';
-import BlogPost from './BlogPost';
+import PageTitle from '../common/PageTitle';
 import NotFoundPage from "../common/NotFoundPage";
+import BlogPost from './BlogPost';
+import BlogPostList from './BlogPostList';
+
+const PAGE_URL = 'https://api.rahulyesantharao.com/blog-api/pages'
+const POST_URL = 'https://api.rahulyesantharao.com/blog-api/posts'
+
+const POST_404 = {post_title: "Error 404", post_html:"<p>Sorry! That post does not seem to exist.</p>", author:{}, post_id:"ENTER"}
+
 class BlogPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      curPage: 1,
-      hasOlder: false,
-      hasNewer: false,
-      posts: [],
-      post: {}
+      numPages: 0,
+      posts: {},
+      pages: []
+    };
+  }
+  aggregatePage(pageNum, pageArr) {
+    let loaded = true;
+    for (let postNum in this.state.pages[pageNum-1]) {
+      let post = this.state.pages[pageNum-1][postNum];
+      let next = this.state.posts[post];
+      if(!next.hasOwnProperty('post_id')) {
+        next = {post_title: "Loading...", post_id: post, author: {}}
+        loaded = false;
+      }
+      pageArr.push(next);
     }
+    return loaded;
   }
-
-  getPost(postNum) {
-    const url = `/blog-posts/post-${postNum}.json`;
+  getPost(postId) {
+    const url = POST_URL + `/${postId}`;
+    console.log(`getPost(${postId}): ${url}`);
     return fetch(url)
-      .then(response => {
-        // console.log("Fetched", response); // eslint-disable-line no-console
-        return response.json();
-      }).catch(ex => { // eslint-disable-line no-unused-vars
-        // console.log('fetch post exception :(', ex) // eslint-disable-line no-console
-        return {post: {title: "Error 404", content:"<p>Sorry! That post does not seem to exist.</p>", id:postNum}}
-      });
-  }
-  setPost(postNum) {
-    this.getPost(postNum).then(data => {
-      this.setState(prevState => (
-        Object.assign({}, prevState, data)
-      ))
+    .then(response => {
+      console.log("Step 1");
+      return response.json();
+    })
+    .then(data => {
+      console.log("Step 2");
+      this.setState(prevState => {
+        let newPost = Object.assign({}, prevState.posts[postId], data);
+        let newPosts = Object.assign({}, prevState.posts, {[postId]: newPost});
+        return Object.assign({}, prevState, {posts: newPosts});
+      }, () => console.log(`Post ${postId} Fetched!`, this.state));
+    })
+    .catch(ex => {
+      console.log(`Error fetching ${postId}`, ex); // eslint-disable-line no-console
     });
   }
-  getPage(page) {
-    const url = `/blog-posts/preview-${page}.json`;
+  getPage(pageNum) {
+    const url = PAGE_URL + `/${pageNum}`;
     return fetch(url)
-      .then(response => {
-        // console.log("Fetched", response); // eslint-disable-line no-console
-        return response.json();
-      }).catch(ex => { // eslint-disable-line no-unused-vars
-        // console.log('fetch exception :(', ex) // eslint-disable-line no-console
-      });
-  }
-  getCurPage() {
-    this.getPage(this.state.curPage).then(data => {
-      // console.log("Got CurPage!", data); // eslint-disable-line no-console
-      this.setState(prevState => (
-        Object.assign({}, prevState, {hasOlder:data.hasOlder, hasNewer:data.hasNewer, posts:data.posts.reverse()})
-      ))
+    .then(response => {
+      // console.log(response);
+      // console.log(response.json());
+      return response.json();
+    })
+    .then(data => {
+      this.setState(prevState => {
+        // compile the posts
+        let postsToAdd = {};
+        for (let postNum in data) {
+          let postid = data[postNum].post_id;
+          let post = Object.assign({}, prevState.posts[postid], data[postNum]);
+          postsToAdd[postid] = post;
+        }
+        let newPosts = Object.assign({}, prevState.posts, postsToAdd);
+        return Object.assign({}, prevState, {posts: newPosts});
+      }, () => console.log(`Page ${pageNum} Fetched!`, this.state));
+    })
+    .catch(ex => {
+      console.log(`Error fetching page ${pageNum}!`, ex); // eslint-disable-line no-console
     });
   }
+  setup() {
+    // Posts + Pages Initial Setup
+    return fetch(PAGE_URL)
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        // build post object
+        console.log("Initial Data", data);
+        let newPosts = {};
+        Object.assign(newPosts, this.state.posts); // keep anything we loaded before
+        for(const page in data.pages) {
+          console.log(page);
+          for(const post in data.pages[page]) {
+            console.log(data.pages[page][post]);
+            if(!newPosts.hasOwnProperty(data.pages[page][post])) newPosts[data.pages[page][post]] = {pageNum: (parseInt(page)+1)}
+            else newPosts[data.pages[page][post]].pageNum = (parseInt(page)+1);
+          }
+        }
+        console.log("Initial Posts", newPosts);
 
-  getNewer() {
-    this.setState(prevState => (
-      Object.assign({}, prevState, {curPage:prevState.curPage+1})
-    ), this.getCurPage);
+        // set new state with fetched data
+        this.setState(prevState => (
+          Object.assign({}, prevState, {numPages:data.num_pages, posts: newPosts, pages:data.pages})
+        ), () => console.log("Initial Setup Done!", this.state));
+      })
+      .catch(ex => {
+        console.log('fetch initial setup exception :(', ex) // eslint-disable-line no-console
+      });
   }
-  getOlder() {
-    this.setState(prevState => (
-      Object.assign({}, prevState, {curPage:prevState.curPage-1})
-    ), this.getCurPage);
-  }
-
   componentDidMount() {
-    // console.log("Blog Mounted!"); // eslint-disable-line no-console
-    this.getCurPage();
+    this.setup();
+    console.log("BlogPage Mounted!");
   }
 
   render() {
-    // console.log(this.props.status);
+    console.log("RENDER BLOGPAGE");
     let found = false;
-    return (
+    let unmounted = <PageAnimationWrapper mounted={false} home={false}/>;
+    return(
       <div>
-        <section className="container-fluid" id="projectsHeader">
-          <div className="container">
-            <div className="columns is-centered">
-              <div className="column is-12-mobile is-8-tablet is-8-desktop">
-                <h1><span>/usr/etc/rahul/*</span></h1>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PageTitle titleId="blogHeader" titleText="/usr/etc/rahul/*"/>
         <section className="container top-pad">
-        <Route exact path="/blog" children={({ match, ...rest }) => {
-          if(match) {
+          {/* ROUTE to page 1 */}
+          {/* <Redirect exact to="/blog/pages/1" from="/blog"/> */}
+          <Route exact path="/blog" children={({match, ...rest}) => {
+            if(!match) return unmounted;
+
+            // match found!
+            console.log("/blog | matched!");
+            let pageNum = 1;
             document.title = "Blog | Rahul Yesantharao";
             found = true;
-          }
-          // console.log("New State!", this.state); // eslint-disable-line no-console
-          return (
-          <PageAnimationWrapper mounted={match?true:false} home={false}>
-            <BlogPostList {...rest} posts={this.state.posts} getNewer={this.getNewer.bind(this)} getOlder={this.getOlder.bind(this)} hasNewer={this.state.hasNewer} hasOlder={this.state.hasOlder}/>
-          </PageAnimationWrapper>
-        );}}/>
-        <Route exact path="/blog/posts/:id" children={({ match, ...rest }) => {
-          if(match) {
+            // If BlogManager has loaded, find the page
+            let pageArr = [];
+            let loaded = true;
+            if(this.state.numPages>0) {
+              loaded = this.aggregatePage(pageNum, pageArr);
+              console.log("/blog | Page data: ", pageArr);
+            }
+            if(!loaded) {
+              console.log("/blog | Fetching the page!");
+              this.getPage(pageNum); // page isn't fully loaded
+            }
+            return (
+              <PageAnimationWrapper mounted={true} home={false}>
+                <BlogPostList {...rest}
+                  page={pageArr}
+                  pageNum={pageNum}
+                  hasOlder={pageNum<this.state.numPages}
+                  hasNewer={pageNum>1}/>
+              </PageAnimationWrapper>
+            );
+          }}/>
+
+          {/* ROUTE to page by number */}
+          <Route exact path="/blog/pages/:num" children={({ match, ...rest }) => { // go to a page
+            if(!match) return unmounted;
+
+            // Page matched!
             document.title = "Blog | Rahul Yesantharao";
             found = true;
-          }
-          return (
-          <PageAnimationWrapper mounted={match?true:false} home={false}>
-            <BlogPost {...rest} post={this.state.post} getPost={this.setPost.bind(this)}/>
-          </PageAnimationWrapper>
-        );}}/>
-        <Route children={({ ...rest }) => {
-          if(!found) document.title = "Error 404 | Rahul Yesantharao";
-          return (
-          <PageAnimationWrapper mounted={!found} home={false}>
-            <NotFoundPage page="blog" {...rest}/>
-          </PageAnimationWrapper>
-        );}}/>
+            let pageNum = Number.parseInt(match.params.num);
+
+            console.log(`/blog/pages | Page Matched: ${pageNum}`);
+            console.log("/blog/pages | Page:", pageNum, "; numPages:", this.state.numPages);
+
+            // If BlogManager has loaded, find the page
+            let pageArr = [];
+            let loaded = true;
+            if(this.state.numPages>0) {
+              if(!Number.isInteger(pageNum) || (pageNum<1) || (pageNum>this.state.numPages)) {
+                console.log("/blog/pages | PROBLEM: pageNum:", pageNum, "; numPages:", this.state.numPages, " | ", Number.isInteger(pageNum));
+                found = false;
+                return unmounted;
+              }
+              else {
+                loaded = this.aggregatePage(pageNum, pageArr);
+                console.log("/blog/pages | Page data", pageArr);
+              }
+            }
+            if(!loaded) {
+              console.log("/blog/pages | Fetching the page!");
+              this.getPage(pageNum); // page isn't fully loaded
+            }
+
+            return (
+            <PageAnimationWrapper mounted={true} home={false}>
+              <BlogPostList {...rest}
+                page={pageArr}
+                pageNum={pageNum}
+                hasOlder={pageNum<this.state.numPages}
+                hasNewer={pageNum>1}/>
+            </PageAnimationWrapper>
+          );}}/>
+
+          {/* ROUTE to post by id */}
+          <Route exact path="/blog/posts/:id" children={({ match, ...rest }) => { // go to a post
+            if(!match) return unmounted;
+
+            document.title = "Blog | Rahul Yesantharao";
+            found = true;
+            let pageId = match.params.id;
+
+            // If the BlogManager has loaded, then find the post
+            let postObj = {};
+            if(this.state.numPages>0) {
+              if(this.state.posts.hasOwnProperty(pageId)) postObj = this.state.posts[pageId];
+              else postObj = Object.assign({},POST_404,{post_id:pageId}, {error:true});
+            }
+
+            return (
+            <PageAnimationWrapper mounted={true} home={false}>
+              <BlogPost {...rest} postId={pageId} post={postObj} getPost={this.getPost.bind(this)}/>
+            </PageAnimationWrapper>
+          );}}/>
+
+          {/* ERROR Blog 404 */}
+          <Route children={({ ...rest }) => { // blog 404 page
+            if(!found) document.title = "Error 404 | Blog | Rahul Yesantharao";
+            return (
+            <PageAnimationWrapper mounted={!found} home={false}>
+              <NotFoundPage page="blog" {...rest}/>
+            </PageAnimationWrapper>
+          );}}/>
         </section>
       </div>
     );

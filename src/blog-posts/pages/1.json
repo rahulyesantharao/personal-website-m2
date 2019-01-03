@@ -1,0 +1,59 @@
+[
+  {
+    "author": {
+      "description": "Student, Programmer, Artist.",
+      "location": "Cambridge, MA",
+      "name": "Rahul Yesantharao"
+    },
+    "post_date": "Tue, 26 Dec 2017 00:00:00 GMT",
+    "post_html": "<p>Hello! This is the start of my new blog, /usr/etc/rahul/*. I've been meaning to make a blog for over a year now, and I finally got around to making this.</p>\n<p>I'm not entirely sure what I will be writing about, but it will most likely be a combination of notes on my experiences and projects, so expect to see a lot of tech-related content!</p>",
+    "post_id": "hello-world",
+    "post_title": "Hello, World!"
+  },
+  {
+    "author": {
+      "description": "Student, Programmer, Artist.",
+      "location": "Cambridge, MA",
+      "name": "Rahul Yesantharao"
+    },
+    "post_date": "Wed, 21 Feb 2018 00:00:00 GMT",
+    "post_html": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://esp.mit.edu/learn/Splash/index.html\" title=\"MIT Splash\">MIT Splash</a> is a weekend program where MIT students teach classes on literally any topic for high schoolers. This past year (sorry for the late post!), I taught an intro class on ReactJS, and I was pretty happy with how it went, so I wanted to do a quick write up here (including a tutorial at the bottom).</p>\n<h3>Preparing A Class</h3>\n<p>I was originally planning on creating an example application for the class and having the class follow along as we built the app up from the scratch. After thinking about the various basic topics that I wanted to teach and how to best demonstrate them, however, I realized that the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://reactjs.org/tutorial/tutorial.html\" title=\"example tic-tac-toe app\">example tic-tac-toe app</a> that Facebook provides is perfectly suited to demonstrate all the foundational concepts that make React so exciting. So, I decided instead to prepare a good presentation that follows this tutorial and to explain each concept thoroughly as we came upon it in the example application. I figured this would still add value to independently following the tutorial as it would let me explain difficult concepts (e.g. unidirectional data flow) in greater detail and allow the students to ask questions. This turned out to be true, as my students asked me many questions that were not directly addressed in the tutorial (and indeed, which I hadn\u2019t thought of myself).</p>\n<p>In addition, I prepared a detailed explanation of how to set up the development environment because it is <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f\" title=\"extremely nontrivial\">extremely nontrivial</a> to get even a minimal setup to go from React code to a functioning website (that link was from 2 years ago, and believe it or not, it's only gotten worse!). I went with the create-react-app package as it would abstract away most of the specific tools and workflow (e.g. transpiling, packaging, linting, etc.) and allow us to focus on code. I did, however, plan out time to explain further time to explain these ideas and point the students to further resources to learn exactly how we go from code to product.</p>\n<p>Overall, preparing the class turned out to be reasonably quick (~2 hours), as I just went with a PowerPoint that listed the key topics and made sure that I reviewed the topics so I could field questions about them the next day.</p>\n<h3>Teaching A Class</h3>\n<p>The day of the event was a bit hectic as I had been planning on a Linux environment (and all my instructions were based on this assumption), but the lab I was put in had Windows machines; worse, they didn't have sufficient rights to install any software. This completely threw off my plan, as we couldn't install Node (there are ways to run Node as a local user, but I thought getting that set up for each student would completely sidetrack us from the main goal of learning React). Luckily, Facebook came to the rescue once again, and I just explained the idea of setting up an environment and then had the students work on the online CodePen that is set up to follow the React tutorial.</p>\n<p>While teaching, I began suspecting that many of the students were getting lost, but also were too shy or embarrassed to ask for further clarification (although I did stop after each slide to check if the students had any questions). My suspicions were confirmed when one student finally began asking questions, and after that, the students began asking more frequently about confusing topics. One particularly confusing topic was unidirectional data flow, which I diagrammed on the blackboard to show how the UI is always a visual representation of the current state.</p>\n<p>Overall, teaching was pretty fun after the few hiccups in setup because explaining topics that I find interesting and conveying the reason for their usefulness is exciting.</p>\n<h3>A Class</h3>\n<p>As promised, here is the actual tutorial! Hopefully you found my ramblings above interesting, or at least short enough to skip over. One thing that becomes quickly evident when trying to teach/learn web development is that it's really useful (maybe even necessary) to have a pretty good grasp over basic JavaScript and (importantly) ES6. So, before going over this tutorial, it might be a good time to head over to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript\" title=\"the MDN tutorials\">the MDN tutorials</a> and refresh your JavaScript.</p>\n<p>Check out the PowerPoint <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://rahulyesantharao.com/blog-posts/assets/react-tutorial.pdf\" title=\"here\">here</a> and follow along at <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://reactjs.org/tutorial/tutorial.html\" title=\"the Facebook React Tutorial\">the Facebook React Tutorial</a>.</p>\n<p>Check back soon for a more detailed tutorial!</p>",
+    "post_id": "mit-splash-2017",
+    "post_title": "MIT Splash 2017!"
+  },
+  {
+    "author": {
+      "description": "Student, Programmer, Artist.",
+      "location": "Cambridge, MA",
+      "name": "Rahul Yesantharao"
+    },
+    "post_date": "Thu, 12 Apr 2018 00:00:00 GMT",
+    "post_update": "Fri, 13 Apr 2018 00:00:00 GMT",
+    "post_html": "<p>Test Post 3</p>",
+    "post_id": "post-3",
+    "post_title": "Post 3"
+  },
+  {
+    "author": {
+      "description": "Student, Programmer, Artist.",
+      "location": "Cambridge, MA",
+      "name": "Rahul Yesantharao"
+    },
+    "post_date": "Thu, 12 Apr 2018 00:00:00 GMT",
+    "post_update": "Fri, 13 Apr 2018 00:00:00 GMT",
+    "post_html": "<p>Test Post 4!</p>",
+    "post_id": "post-4",
+    "post_title": "Post 4"
+  },
+  {
+    "author": {
+      "description": "Student, Programmer, Artist.",
+      "location": "Cambridge, MA",
+      "name": "Rahul Yesantharao"
+    },
+    "post_date": "Thu, 12 Apr 2018 00:00:00 GMT",
+    "post_html": "<p>Test Post 5!</p>",
+    "post_id": "post-5",
+    "post_title": "Post 5"
+  }
+]

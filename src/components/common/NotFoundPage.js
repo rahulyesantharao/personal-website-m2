@@ -30,7 +30,7 @@ const NotFoundPage = (props) => {
             <p>Sorry! That page does not seem to exist.</p>
           </div>
         </div>
-        <BlogPostFooter/>
+        <BlogPostFooter page={1}/>
       </div>
     )
   }

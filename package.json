@@ -11,7 +11,7 @@
     "start": "npm-run-all --parallel lint:watch dev:watch",
     "clean:dist": "rimraf ./dist && mkdir dist",
     "copy-favicons": "copyfiles -u 2 src/favicons/* dist",
-    "copy-blog": "copyfiles -u 2 src/blog-posts/* dist/blog-posts",
+    "copy-blog": "copyfiles -u 2 src/blog-posts/* src/blog-posts/posts/* src/blog-posts/pages/* dist/blog-posts",
     "prebuild": "npm-run-all clean:dist lint copy-favicons copy-blog",
     "build": "node ./tools/build.js",
     "postbuild": "node ./tools/distServer.js"
@@ -30,6 +30,7 @@
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
+    "babel-plugin-prismjs": "^1.0.2",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
@@ -60,9 +61,12 @@
     "webpack-dev-middleware": "^1.12.0"
   },
   "dependencies": {
+    "prismjs": "^1.14.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.1.2",
+    "react-router-hash-link": "^1.2.0",
     "react-transition-group": "^2.2.0"
   }
 }

@@ -1,22 +1,20 @@
+//Photo by Kevin Hernandez on Unsplash
 import React from 'react';
+import {HashLink} from 'react-router-hash-link';
+import PageTitle from '../common/PageTitle';
 
 const AboutPage = () => {
   return (
     <div>
-    <section className="container-fluid" id="aboutHeader">
-      <div className="container">
-        <div className="columns is-centered">
-          <div className="column is-12-mobile is-8-tablet is-8-desktop">
-            <h1><span>About Me</span></h1>
-          </div>
-        </div>
-      </div>
-    </section>
+    <PageTitle titleId="aboutHeader" titleText="About Me"/>
     <section className="container top-pad">
       {/* <div className="columns is-centered">
         <h1 className="column is-12-mobile is-8-tablet is-8-desktop"><span>About Me</span></h1>
       </div> */}
       <div className="columns is-centered">
+        <div className="column is-10-mobile is-offset-1-mobile is-5-tablet is-3-desktop">
+          <img src={require('../../images/portrait_filtered.jpg')} style={{'border':'4px solid #2b669b'}}/>
+        </div>
         <div className="column is-12-mobile is-8-tablet is-8-desktop">
           <div className="text">
             <p style={{paddingTop:'0'}}>
@@ -24,7 +22,10 @@ const AboutPage = () => {
               I am passionate about anything and everything relating to technology.
             </p>
             <p>
-              I am a freshman at the Massachusetts Institute of Technology, studying Course 6-2 (Electrical Engineering and Computer Science).
+              I am a freshman at the Massachusetts Institute of Technology, studying Course 6-2 (Electrical Engineering and Computer Science). Check out my <HashLink exact to="/coursework">coursework</HashLink> page! In my free time, I direct DevOps for <a href="https://hackmit.org/" target="_blank" rel="noopener noreferrer">HackMIT</a> and help run the <a href="http://ieeeacm.mit.edu/" target="_blank" rel="noopener noreferrer">MIT IEEE/ACM</a> student chapter.
+            </p>
+            <p>
+              Over the 2018 summer, I worked as a Software Engineering Intern on the Infrastructure team at <a href="https://www.quora.com/" target="_blank" rel="noopener noreferrer">Quora</a>!
             </p>
             <p>
               I was born and raised in Houston, Texas, just a couple minutes away from the Johnson Space Center.
@@ -39,7 +40,7 @@ const AboutPage = () => {
             <p>
               In my free time, I love reading just about any book I can get my hands on (but especially Harry Potter) and watching movies,
               both Bollywood and Hollywood. Some of my favorites include the Marvel Cinematic Universe (Team Iron Man!),
-              Zootopia, and Sherlock. I also enjoy watching tennis (#RafaNadal) and YouTube tech reviewers.
+              Zootopia, and Sherlock. I also enjoy watching tennis (Rafa!) and YouTube tech reviewers.
             </p>
           </div>
         </div>
