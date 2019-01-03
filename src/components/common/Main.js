@@ -3,6 +3,7 @@ import React from 'react';
 import {Route/*, Switch*/} from 'react-router-dom';
 import HomePage from '../home/HomePage';
 import AboutPage from '../about/AboutPage';
+import ListsPage from '../lists/ListsPage';
 import ProjectsPage from '../projects/ProjectsPage';
 import BlogPage from '../blog/BlogPage';
 import PropTypes from 'prop-types';
@@ -31,6 +32,16 @@ const Main = (props) => {
         return (
         <PageAnimationWrapper mounted={match?true:false} home={false}>
           <AboutPage {...rest}/>
+        </PageAnimationWrapper>
+      );}}/>
+      <Route exact path="/coursework" children={({ match, ...rest }) => {
+        if(match) {
+          found = true;
+          document.title = "Coursework | Rahul Yesantharao";
+        }
+        return (
+        <PageAnimationWrapper mounted={match?true:false} home={false}>
+          <ListsPage {...rest}/>
         </PageAnimationWrapper>
       );}}/>
       <Route path="/projects" children={({ match, ...rest }) => {

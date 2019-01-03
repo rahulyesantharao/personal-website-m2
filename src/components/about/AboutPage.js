@@ -1,5 +1,6 @@
-// Photo by Nathan Dumlao on Unsplash
+//Photo by Kevin Hernandez on Unsplash
 import React from 'react';
+import {HashLink} from 'react-router-hash-link';
 import PageTitle from '../common/PageTitle';
 
 const AboutPage = () => {
@@ -21,10 +22,10 @@ const AboutPage = () => {
               I am passionate about anything and everything relating to technology.
             </p>
             <p>
-              I am a freshman at the Massachusetts Institute of Technology, studying Course 6-2 (Electrical Engineering and Computer Science). Check out my <a href="#courseworkHeader">coursework</a> below! In my free time, I direct DevOps for <a href="https://hackmit.org/" target="_blank" rel="noopener noreferrer">HackMIT</a> and help run the <a href="http://ieeeacm.mit.edu/" target="_blank" rel="noopener noreferrer">MIT IEEE/ACM</a> student chapter.
+              I am a freshman at the Massachusetts Institute of Technology, studying Course 6-2 (Electrical Engineering and Computer Science). Check out my <HashLink exact to="/coursework">coursework</HashLink> page! In my free time, I direct DevOps for <a href="https://hackmit.org/" target="_blank" rel="noopener noreferrer">HackMIT</a> and help run the <a href="http://ieeeacm.mit.edu/" target="_blank" rel="noopener noreferrer">MIT IEEE/ACM</a> student chapter.
             </p>
             <p>
-              This summer, I am working as a Software Engineering Intern on the Infrastructure team at <a href="https://www.quora.com/" target="_blank" rel="noopener noreferrer">Quora</a>!
+              Over the 2018 summer, I worked as a Software Engineering Intern on the Infrastructure team at <a href="https://www.quora.com/" target="_blank" rel="noopener noreferrer">Quora</a>!
             </p>
             <p>
               I was born and raised in Houston, Texas, just a couple minutes away from the Johnson Space Center.
@@ -39,39 +40,8 @@ const AboutPage = () => {
             <p>
               In my free time, I love reading just about any book I can get my hands on (but especially Harry Potter) and watching movies,
               both Bollywood and Hollywood. Some of my favorites include the Marvel Cinematic Universe (Team Iron Man!),
-              Zootopia, and Sherlock. I also enjoy watching tennis (#RafaNadal) and YouTube tech reviewers.
+              Zootopia, and Sherlock. I also enjoy watching tennis (Rafa!) and YouTube tech reviewers.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <PageTitle titleId="courseworkHeader" titleText="Coursework"/>
-    <section className="container top-pad">
-      <div className="columns is-centered">
-        <div className="column is-12-mobile is-8-tablet is-8-desktop">
-          <div className="text">
-            <h4>Spring 2018</h4>
-            <ul>
-              <li>18.03 - Differential Equations</li>
-              <li>8.02 - Physics II</li>
-              <li>14.01 - Introduction to Microeconomics</li>
-              <li>6.041 - Introduction to Probability</li>
-              <li>6.046 - Design and Analysis of Algorithms</li>
-              <li>6.004 - Computation Structures</li>
-            </ul>
-            <h4>IAP 2018</h4>
-            <ul>
-              <li>6.117 - Introduction to Electrical Engineering Lab Skills</li>
-              <li>6.147 - The Battlecode Programming Competition</li>
-              <li>18.02 - Multivariable Calculus (ASE)</li>
-            </ul>
-            <h4>Fall 2017</h4>
-            <ul>
-              <li>7.012 - Introductory Biology</li>
-              <li>5.111 - Principles of Chemical Science</li>
-              <li>21M.030 - Introduction to World Music</li>
-              <li>6.02 - Introduction to EECS via Communication Networks</li>
-            </ul>
           </div>
         </div>
       </div>
