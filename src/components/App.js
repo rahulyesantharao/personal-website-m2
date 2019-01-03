@@ -20,7 +20,7 @@ class App extends React.Component {
   render() {
     const isHome = this.props.location.pathname=='/';
     return (
-      <div style={this.state.menu?{overflow:"hidden"}:{}}>
+      <div style={{overflow:(this.state.menu?"hidden":"visible"), height: "100%" }}>
         <Header menuOpen={this.state.menu} toggleMenu={this.toggleMenu.bind(this)} isHome={isHome}/>
         <Main isHome={isHome}/>
         <Footer isHome={isHome}/>
